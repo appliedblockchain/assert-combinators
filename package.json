@@ -1,0 +1,29 @@
+{
+  "name": "@appliedblockchain/assert-combinators",
+  "version": "0.0.1",
+  "description": "Assertion combinators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && flow check && jest",
+    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "Mirek Rusin <mirek@me.com> (https://github.com/mirek)",
+  "license": "MIT",
+  "devDependencies": {
+    "@appliedblockchain/changelog": "1.2.0",
+    "@appliedblockchain/eslint-config": "2.6.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-jest": "23.8.2",
+    "flow-bin": "0.120.1",
+    "jest": "25.1.0"
+  },
+  "eslintConfig": {
+    "extends": "@appliedblockchain"
+  },
+  "eslintIgnore": [
+    "flow-typed/*",
+    "wip/*",
+    "docs/*"
+  ]
+}
