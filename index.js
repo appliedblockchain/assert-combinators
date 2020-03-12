@@ -12,6 +12,7 @@ const object = require('./object')
 const or = require('./or')
 const string = require('./string')
 const taggedOr = require('./tagged-or')
+const tuple = require('./tuple')
 
 module.exports = {
   and,
@@ -25,5 +26,6 @@ module.exports = {
   object,
   or,
   string,
-  taggedOr
+  taggedOr,
+  tuple
 }
