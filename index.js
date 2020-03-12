@@ -10,6 +10,7 @@ const finite = require('./finite')
 const number = require('./number')
 const object = require('./object')
 const or = require('./or')
+const shape = require('./shape')
 const string = require('./string')
 const taggedOr = require('./tagged-or')
 const tuple = require('./tuple')
@@ -25,6 +26,7 @@ module.exports = {
   number,
   object,
   or,
+  shape,
   string,
   taggedOr,
   tuple
