@@ -5,6 +5,7 @@ const any = require('./any')
 const array = require('./array')
 const boolean = require('./boolean')
 const dateString = require('./date-string')
+const exact = require('./exact')
 const finite = require('./finite')
 const number = require('./number')
 const object = require('./object')
@@ -18,6 +19,7 @@ module.exports = {
   array,
   boolean,
   dateString,
+  exact,
   finite,
   number,
   object,
