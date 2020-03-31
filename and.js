@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 /*::
 
-type $A<R> = any => R
+type $A<R> = mixed => R
 
 declare function and<A>($A<A>): $A<A>;
 declare function and<A, B>($A<A>, $A<B>): $A<A & B>;

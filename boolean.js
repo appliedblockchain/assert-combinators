@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const boolean /*: any => boolean */ =
+const boolean /*: mixed => boolean */ =
   value => {
     if (typeof value !== 'boolean') {
       throw new TypeError(`Expected boolean, got ${inspect(value)}.`)

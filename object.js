@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const object /*: <KV: {}>(KV) => any => $ObjMapi<KV, <K, V>(K, (...Iterable<any>) => V) => V> */ = /*:: <KV> */
+const object /*: <KV: { ... }>(KV) => mixed => $ObjMapi<KV, <K, V>(K, (...Iterable<mixed>) => V) => V> */ = /*:: <KV> */
   (kvs) =>
     value => {
       if (value == null || typeof value !== 'object') {

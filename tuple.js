@@ -43,8 +43,9 @@ const tuple =
       if (!isArray(value)) {
         throw new TypeError(`Expected tuple, got ${inspect(value)}.`)
       }
-      if (value.length !== as.length) {
-        throw new TypeError(`Expected tuple arity ${as.length}, got ${value.length} in ${inspect(value)}.`)
+      // TODO: Check min/max arity, trim undefined tail.
+      if (value.length > as.length) {
+        throw new TypeError(`Expected tuple arity less or equal to ${as.length}, got ${value.length} in ${inspect(value)}.`)
       }
       return value.map((_, i) => as[i](_))
     }

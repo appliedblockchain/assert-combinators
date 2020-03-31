@@ -1,12 +1,8 @@
-// @flow
+// @flow strict
 
-/*::
+/*:: import type { NonVoidType } from './types/non-void-type' */
 
-type $NonVoidType<T> = $NonMaybeType<T> | null
-
-*/
-
-const defined /*: <T>(T) => $NonVoidType<T> */ = /*:: <T> */
+const defined /*: <T>(T) => NonVoidType<T> */ = /*:: <T> */
   (value) => {
     if (typeof value === 'undefined') {
       throw new TypeError('Expected defined.')

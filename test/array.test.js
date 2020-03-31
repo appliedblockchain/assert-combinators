@@ -9,7 +9,7 @@ test('array', () => {
   // $FlowFixMe
   /*:: ;(r: number[]); */
 
-  /*:: ;(r: string[]); */
+  /*:: ;(r: $ReadOnlyArray<string>); */
 
   expect(r).toEqual([ 'a', 'b' ])
 })

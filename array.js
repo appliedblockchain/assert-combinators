@@ -1,14 +1,14 @@
-// @flow
+// @flow strict
 
-const any = require('./any')
+const mixed = require('./mixed')
 
-const array /*: <T>(a?: any => T) => (any => T[]) */ = /*:: <T> */
-  (a = any) =>
+const array /*: <T>(a?: mixed => T) => (mixed => $ReadOnlyArray<T>) */ = /*:: <T> */
+  (a = mixed) =>
     value => {
       if (!Array.isArray(value)) {
         throw new TypeError('Expected array.')
       }
-      if (a && a !== any) {
+      if (a && a !== mixed) {
         value.every(_ => a(_))
       }
       return value

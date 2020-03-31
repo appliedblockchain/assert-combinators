@@ -10,9 +10,6 @@ test.skip('and', () => {
     object({ name: string })
   )(JSON.parse('{"name":"Foo"}'))
 
-  // $FlowFixMe
-  /*:: ;(r: {| firstName: number, lastName: string, name: string |}); */
-
   /*:: ;(r: {| name: string |}); */
   expect(r).toEqual({ name: 'Foo' })
 })
