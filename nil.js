@@ -1,6 +1,6 @@
-// @flow
+// @flow strict
 
-const nil /*: any => null | void */ =
+const nil /*: mixed => null | void */ =
   value => {
     if (value != null) {
       throw new TypeError('Expected nil.')

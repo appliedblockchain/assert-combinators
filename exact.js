@@ -1,11 +1,14 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 const object = require('./object')
 
-const exact /*: <KV: {}>(KV) => any => $ObjMapi<$Exact<KV>, <K, V>(K, (...Iterable<any>) => V) => V> */ = /*:: <KV> */
+const exact /*: <KV: {}>(KV) => mixed => $ObjMapi<$Exact<KV>, <K, V>(K, (...Iterable<mixed>) => V) => V> */ = /*:: <KV> */
   (kvs) =>
     value => {
+      if (value === null || typeof value !== 'object') {
+        throw new TypeError(`Expected object, got ${inspect(value)}.`)
+      }
       const result = object(kvs)(value)
       const keys = Object
         .keys(value)

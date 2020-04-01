@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const null_ /*: any => null */ =
+const null_ /*: mixed => null */ =
   value => {
     if (value !== null) {
       throw new TypeError(`Expected null, got ${inspect(value)}.`)

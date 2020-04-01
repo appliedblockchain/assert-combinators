@@ -1,4 +1,4 @@
-// @flow string
+// @flow strict
 
 const { inspect } = require('util')
 

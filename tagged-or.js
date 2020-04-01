@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
 /*::
 
-type $A<R> = any => R
+type $A<R> = mixed => R
 type $R<T,V> = $ReadOnly<{| tag: T, value: V |}>
 
 declare function taggedOr<A_,A>([A_,$A<A>]): $A<$R<A_,A>>;

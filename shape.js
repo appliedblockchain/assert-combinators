@@ -1,6 +1,6 @@
-// @flow
+// @flow strict
 
-const shape /*: <KV: {}>(KV) => any => $Shape<$ObjMapi<KV, <K, V>(K, (...Iterable<any>) => V) => V>> */ = /*:: <KV> */
+const shape /*: <KV: {}>(KV) => mixed => $Shape<$ObjMapi<KV, <K, V>(K, (...Iterable<mixed>) => V) => V>> */ = /*:: <KV> */
   (kvs) =>
     value => {
       if (value == null || typeof value !== 'object') {

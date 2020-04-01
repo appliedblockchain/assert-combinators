@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 const and = require('./and')
 const array = require('./array')
@@ -15,6 +15,7 @@ const nullOr = require('./null-or')
 const number = require('./number')
 const object = require('./object')
 const or = require('./or')
+const predicate = require('./predicate')
 const shape = require('./shape')
 const string = require('./string')
 const taggedOr = require('./tagged-or')
@@ -38,6 +39,7 @@ module.exports = {
   number,
   object,
   or,
+  predicate,
   shape,
   string,
   taggedOr,

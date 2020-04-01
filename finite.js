@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const finite /*: any => number */ =
+const finite /*: mixed => number */ =
   value => {
-    if (!Number.isFinite(value)) {
+    if (typeof value !== 'number' || !Number.isFinite(value)) {
       throw new TypeError(`Expected finite number, got ${inspect(value)}.`)
     }
     return value
