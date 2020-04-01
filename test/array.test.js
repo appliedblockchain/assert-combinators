@@ -9,7 +9,11 @@ test('array', () => {
   // $FlowFixMe
   /*:: ;(r: number[]); */
 
-  /*:: ;(r: $ReadOnlyArray<string>); */
+  /*:: ;(r: string[]); */
 
   expect(r).toEqual([ 'a', 'b' ])
+})
+
+test('array error', () => {
+  expect(() => array(string)(JSON.parse('["a",42]'))).toThrow('[1] Expected string, got 42.')
 })

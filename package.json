@@ -18,6 +18,12 @@
     "flow-bin": "0.121.0",
     "jest": "25.2.4"
   },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/wip/"
+    ]
+  },
   "eslintConfig": {
     "extends": "@appliedblockchain"
   },

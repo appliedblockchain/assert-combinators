@@ -7,13 +7,15 @@ const exact /*: <KV: {}>(KV) => any => $ObjMapi<$Exact<KV>, <K, V>(K, (...Iterab
   (kvs) =>
     value => {
       const result = object(kvs)(value)
-      const keys = Object.keys(value)
-      for (const key of keys) {
-        if (!Object.prototype.hasOwnProperty.call(kvs, key)) {
-          throw new TypeError(`Expected object with ${key} property in ${inspect(value)}.`)
-        }
+      const keys = Object
+        .keys(value)
+        .filter(key => !Object.prototype.hasOwnProperty.call(kvs, key))
+      if (keys.length) {
+        throw new TypeError(`Unexpected extra keys ${keys.map(String).join(', ')} in ${inspect(value)}.`)
       }
-      return (result /*: any */)
+
+      // $FlowFixMe
+      return result
     }
 
 module.exports = exact

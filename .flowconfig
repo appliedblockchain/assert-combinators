@@ -15,6 +15,5 @@ include_warnings=true
 nonstrict-import
 sketchy-null
 unclear-type
-unsafe-getters-setters
 untyped-import
 untyped-type-import
