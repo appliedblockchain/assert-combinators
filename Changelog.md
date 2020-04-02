@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.1.1](../../compare/v1.1.0...v1.1.1) (2020-04-02)
+
+* Fixing flow errors.
+* Updating changelog.
+
 ## [v1.1.0](../../compare/v1.0.0...v1.1.0) (2020-04-02)
 
 * Adding predicate. Using flow strict mode.
