@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.2.0](../../compare/v1.1.1...v1.2.0) (2020-04-13)
+
+* Making one-of strict.
+* Export one-of.
+* Don't collide with mixed.
+* Adding one-of.
+* Adding map.
+* Adding in.
+* Adding clone.
+* Adding sequence.
+* Bumping flow.
+* Updating changelog.
+
 ## [v1.1.1](../../compare/v1.1.0...v1.1.1) (2020-04-02)
 
 * Fixing flow errors.
