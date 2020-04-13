@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
@@ -35,12 +35,14 @@ type OneOf =
 */
 
 const oneOf /*: OneOf */ =
-  (...values /*: any[] */) =>
+  (...values) =>
     value => {
       if (!values.includes(value)) {
         throw new TypeError(`Expected ${inspect(value)} to be one of ${inspect(values)}.`)
       }
-      return (value /*: any */)
+
+      // $FlowFixMe
+      return value
     }
 
 module.exports = oneOf
