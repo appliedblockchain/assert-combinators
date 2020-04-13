@@ -14,6 +14,7 @@ const null_ = require('./null')
 const nullOr = require('./null-or')
 const number = require('./number')
 const object = require('./object')
+const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
 const shape = require('./shape')
@@ -38,6 +39,7 @@ module.exports = {
   nullOr,
   number,
   object,
+  oneOf,
   or,
   predicate,
   shape,
