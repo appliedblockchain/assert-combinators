@@ -7,6 +7,7 @@ const dateString = require('./date-string')
 const defined = require('./defined')
 const exact = require('./exact')
 const finite = require('./finite')
+const map = require('./map')
 const mixed = require('./mixed')
 const nil = require('./nil')
 const nilOr = require('./nil-or')
@@ -17,6 +18,7 @@ const object = require('./object')
 const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
+const sequence = require('./sequence')
 const shape = require('./shape')
 const string = require('./string')
 const taggedOr = require('./tagged-or')
@@ -32,6 +34,7 @@ module.exports = {
   defined,
   exact,
   finite,
+  map,
   mixed,
   nil,
   nilOr,
@@ -42,6 +45,7 @@ module.exports = {
   oneOf,
   or,
   predicate,
+  sequence,
   shape,
   string,
   taggedOr,

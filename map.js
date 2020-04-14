@@ -1,14 +1,16 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const map /*: <T>(mixed => T) => (mixed => T[]) */ = /*:: <T> */
+/*:: import type { $A } from './types/a' */
+
+const map /*: <T>($A<T>) => $A<T[]> */ = /*:: <T> */
   (a) =>
     values => {
       if (!Array.isArray(values)) {
         throw new TypeError(`Expected array, got ${inspect(values)}.`)
       }
-      return values.map(a)
+      return values.map(_ => a(_))
     }
 
 module.exports = map

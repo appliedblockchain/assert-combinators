@@ -4,7 +4,7 @@ const { inspect } = require('util')
 
 /*::
 
-type $A<R> = mixed => R
+import type { $A } from './types/a'
 
 declare function or<A>($A<A>): $A<A>;
 declare function or<A, B>($A<A>, $A<B>): $A<A | B>;
