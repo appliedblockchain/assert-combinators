@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const lte /*: number => (any => number) */ =
+const lte /*: number => (mixed => number) */ =
   than =>
     value => {
       if (typeof value !== 'number') {

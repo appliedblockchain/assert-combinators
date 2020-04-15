@@ -3,10 +3,18 @@
 const and = require('./and')
 const array = require('./array')
 const boolean = require('./boolean')
+const clone = require('./clone')
 const dateString = require('./date-string')
 const defined = require('./defined')
 const exact = require('./exact')
 const finite = require('./finite')
+const gt = require('./gt')
+const gte = require('./gte')
+const if_ = require('./if')
+const implies = require('./implies')
+const in_ = require('./in')
+const lt = require('./lt')
+const lte = require('./lte')
 const map = require('./map')
 const mixed = require('./mixed')
 const nil = require('./nil')
@@ -15,6 +23,7 @@ const null_ = require('./null')
 const nullOr = require('./null-or')
 const number = require('./number')
 const object = require('./object')
+const ok = require('./ok')
 const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
@@ -31,10 +40,18 @@ module.exports = {
   and,
   array,
   boolean,
+  clone,
   dateString,
   defined,
   exact,
   finite,
+  gt,
+  gte,
+  if: if_,
+  implies,
+  in: in_,
+  lt,
+  lte,
   map,
   mixed,
   nil,
@@ -43,6 +60,7 @@ module.exports = {
   nullOr,
   number,
   object,
+  ok,
   oneOf,
   or,
   predicate,

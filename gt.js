@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 
 const { inspect } = require('util')
 
-const gt /*: number => (any => number) */ =
+const gt /*: number => (mixed => number) */ =
   than =>
     value => {
       if (typeof value !== 'number') {
