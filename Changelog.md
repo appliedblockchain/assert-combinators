@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.5.0](../../compare/v1.4.0...v1.5.0) (2020-04-15)
+
+* Adding if, implies, ok; exporting all.
+* Updating changelog.
+
 ## [v1.4.0](../../compare/v1.3.0...v1.4.0) (2020-04-15)
 
 * Adding regexp.
