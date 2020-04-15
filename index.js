@@ -18,6 +18,7 @@ const object = require('./object')
 const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
+const regexp = require('./regexp')
 const sequence = require('./sequence')
 const shape = require('./shape')
 const string = require('./string')
@@ -45,6 +46,7 @@ module.exports = {
   oneOf,
   or,
   predicate,
+  regexp,
   sequence,
   shape,
   string,
