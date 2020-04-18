@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.6.0](../../compare/v1.5.0...v1.6.0) (2020-04-18)
+
+* Adding unique.
+* Updating changelog.
+
 ## [v1.5.0](../../compare/v1.4.0...v1.5.0) (2020-04-15)
 
 * Adding if, implies, ok; exporting all.
