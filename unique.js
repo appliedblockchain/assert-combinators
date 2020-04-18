@@ -3,18 +3,23 @@
 const { inspect } = require('util')
 const { isArray } = Array
 
-const unique /*: <T>(T[]) => T[] */ = /*:: <T> */
-  (values) => {
-    if (!isArray(values)) {
-      throw new TypeError(`Expected array, got ${inspect(values)}.`)
-    }
-    const values_ = values.slice(0).sort()
-    for (let i = 1; i < values_.length; i++) {
-      if (values_[i - 1] === values_[i]) {
-        throw new TypeError(`Expected unique values, got duplicate ${inspect(values_[i])}.`)
+const identity = _ => _
+
+const unique /*: <T>(f?: T => mixed) => (T[] => T[]) */ = /*:: <T> */
+  (f = identity) =>
+    (values) => {
+      if (!isArray(values)) {
+        throw new TypeError(`Expected array, got ${inspect(values)}.`)
       }
+      const set = new Set
+      for (const value of values) {
+        const value_ = f(value)
+        if (set.has(value_)) {
+          throw new TypeError(`Expected unique values, got duplicate ${inspect(value)}.`)
+        }
+        set.add(value_)
+      }
+      return values
     }
-    return values
-  }
 
 module.exports = unique
