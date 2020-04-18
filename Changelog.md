@@ -1,5 +1,10 @@
 # Changelog
 
+## [v2.0.0](../../compare/v1.6.0...v2.0.0) (2020-04-18)
+
+* Using unique with optional map function.
+* Updating changelog.
+
 ## [v1.6.0](../../compare/v1.5.0...v1.6.0) (2020-04-18)
 
 * Adding unique.
