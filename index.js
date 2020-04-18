@@ -35,6 +35,7 @@ const taggedOr = require('./tagged-or')
 const tuple = require('./tuple')
 const undefined_ = require('./undefined')
 const undefinedOr = require('./undefined-or')
+const unique = require('./unique')
 
 module.exports = {
   and,
@@ -71,5 +72,6 @@ module.exports = {
   taggedOr,
   tuple,
   undefined: undefined_,
-  undefinedOr
+  undefinedOr,
+  unique
 }
