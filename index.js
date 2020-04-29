@@ -6,6 +6,7 @@ const boolean = require('./boolean')
 const clone = require('./clone')
 const dateString = require('./date-string')
 const defined = require('./defined')
+const eq = require('./eq')
 const exact = require('./exact')
 const finite = require('./finite')
 const gt = require('./gt')
@@ -19,6 +20,7 @@ const map = require('./map')
 const mixed = require('./mixed')
 const nil = require('./nil')
 const nilOr = require('./nil-or')
+const nonBlankString = require('./non-blank-string')
 const null_ = require('./null')
 const nullOr = require('./null-or')
 const number = require('./number')
@@ -28,6 +30,7 @@ const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
 const regexp = require('./regexp')
+const safeInteger = require('./safe-integer')
 const sequence = require('./sequence')
 const shape = require('./shape')
 const string = require('./string')
@@ -44,6 +47,7 @@ module.exports = {
   clone,
   dateString,
   defined,
+  eq,
   exact,
   finite,
   gt,
@@ -57,6 +61,7 @@ module.exports = {
   mixed,
   nil,
   nilOr,
+  nonBlankString,
   null: null_,
   nullOr,
   number,
@@ -66,6 +71,7 @@ module.exports = {
   or,
   predicate,
   regexp,
+  safeInteger,
   sequence,
   shape,
   string,
