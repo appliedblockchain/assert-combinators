@@ -5,13 +5,15 @@ const { isArray } = Array
 
 const identity = _ => _
 
-const unique /*: <T>(f?: T => mixed) => (T[] => T[]) */ = /*:: <T> */
+const unique /*: <T = mixed>(f?: T => mixed) => (mixed => mixed[]) */ = /*:: <T> */
   (f = identity) =>
     (values) => {
       if (!isArray(values)) {
         throw new TypeError(`Expected array, got ${inspect(values)}.`)
       }
       const set = new Set
+
+      // $FlowFixMe
       for (const value of values) {
         const value_ = f(value)
         if (set.has(value_)) {
@@ -19,6 +21,8 @@ const unique /*: <T>(f?: T => mixed) => (T[] => T[]) */ = /*:: <T> */
         }
         set.add(value_)
       }
+
+      // $FlowFixMe
       return values
     }
 
