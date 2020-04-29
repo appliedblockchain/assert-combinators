@@ -1,5 +1,15 @@
 # Changelog
 
+## [v2.1.0](../../compare/v2.0.0...v2.1.0) (2020-04-29)
+
+* Updating npms.
+* Adding eq, safe-integer and non-blank string to index.
+* Updating unique type.
+* Adding safe-integer.
+* Adding non-blank-string.
+* Adding eq.
+* Updating changelog.
+
 ## [v2.0.0](../../compare/v1.6.0...v2.0.0) (2020-04-18)
 
 * Using unique with optional map function.
