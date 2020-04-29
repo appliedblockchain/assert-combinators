@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . && flow check && jest",
-    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags"
+    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags",
+    "update": "npm-check --update --save-exact"
   },
   "keywords": [],
   "author": "Mirek Rusin <mirek@me.com> (https://github.com/mirek)",
@@ -15,8 +16,9 @@
     "@appliedblockchain/eslint-config": "2.6.0",
     "eslint": "6.8.0",
     "eslint-plugin-jest": "23.8.2",
-    "flow-bin": "0.122.0",
-    "jest": "25.3.0"
+    "flow-bin": "0.123.0",
+    "jest": "25.5.0",
+    "npm-check": "5.9.2"
   },
   "jest": {
     "testPathIgnorePatterns": [
