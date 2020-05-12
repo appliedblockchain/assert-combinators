@@ -1,10 +1,12 @@
 // @flow strict
 
+const rethrow = require('./rethrow')
+
 const undefinedOr /*: <T>(mixed => T) => (mixed => void | T) */ = /*:: <T> */
   (a) =>
     value =>
       typeof value === 'undefined' ?
         undefined :
-        a(value)
+        rethrow(a, 'Was not undefined.')(value)
 
 module.exports = undefinedOr
