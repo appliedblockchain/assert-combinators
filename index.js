@@ -2,6 +2,7 @@
 
 const and = require('./and')
 const array = require('./array')
+const assert = require('./assert')
 const boolean = require('./boolean')
 const clone = require('./clone')
 const dateString = require('./date-string')
@@ -30,6 +31,7 @@ const oneOf = require('./one-of')
 const or = require('./or')
 const predicate = require('./predicate')
 const regexp = require('./regexp')
+const rethrow = require('./rethrow')
 const safeInteger = require('./safe-integer')
 const sequence = require('./sequence')
 const shape = require('./shape')
@@ -43,6 +45,7 @@ const unique = require('./unique')
 module.exports = {
   and,
   array,
+  assert,
   boolean,
   clone,
   dateString,
@@ -71,6 +74,7 @@ module.exports = {
   or,
   predicate,
   regexp,
+  rethrow,
   safeInteger,
   sequence,
   shape,
