@@ -1,5 +1,15 @@
 # Changelog
 
+## [v2.2.0](../../compare/v2.1.0...v2.2.0) (2020-05-12)
+
+* Adding tests.
+* Updating index.
+* Bumping npms.
+* Adding info on optionals in error message.
+* Adding rethrow.
+* Adding assert.
+* Updating changelog.
+
 ## [v2.1.0](../../compare/v2.0.0...v2.1.0) (2020-04-29)
 
 * Updating npms.
