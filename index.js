@@ -15,6 +15,7 @@ const gte = require('./gte')
 const if_ = require('./if')
 const implies = require('./implies')
 const in_ = require('./in')
+const indexer = require('./indexer')
 const lt = require('./lt')
 const lte = require('./lte')
 const map = require('./map')
@@ -58,6 +59,7 @@ module.exports = {
   if: if_,
   implies,
   in: in_,
+  indexer,
   lt,
   lte,
   map,

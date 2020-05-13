@@ -15,7 +15,7 @@
     "@appliedblockchain/changelog": "1.2.0",
     "@appliedblockchain/eslint-config": "2.6.0",
     "eslint": "7.0.0",
-    "eslint-plugin-jest": "23.8.2",
+    "eslint-plugin-jest": "23.11.0",
     "flow-bin": "0.124.0",
     "jest": "26.0.1",
     "npm-check": "5.9.2"
