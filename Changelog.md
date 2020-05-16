@@ -1,5 +1,10 @@
 # Changelog
 
+## [v2.4.0](../../compare/v2.3.0...v2.4.0) (2020-05-16)
+
+* Adding instance.
+* Updating changelog.
+
 ## [v2.3.0](../../compare/v2.2.0...v2.3.0) (2020-05-13)
 
 * Adding indexer.
