@@ -16,6 +16,7 @@ const if_ = require('./if')
 const implies = require('./implies')
 const in_ = require('./in')
 const indexer = require('./indexer')
+const instance = require('./instance')
 const lt = require('./lt')
 const lte = require('./lte')
 const map = require('./map')
@@ -60,6 +61,7 @@ module.exports = {
   implies,
   in: in_,
   indexer,
+  instance,
   lt,
   lte,
   map,
