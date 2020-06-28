@@ -1,5 +1,12 @@
 # Changelog
 
+## [v2.5.0](../../compare/v2.4.0...v2.5.0) (2020-06-28)
+
+* Adding error-message test.
+* Adding error-message combinator.
+* Bumping npms.
+* Updating changelog.
+
 ## [v2.4.0](../../compare/v2.3.0...v2.4.0) (2020-05-16)
 
 * Adding instance.
