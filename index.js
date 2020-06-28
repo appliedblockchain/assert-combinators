@@ -8,6 +8,7 @@ const clone = require('./clone')
 const dateString = require('./date-string')
 const defined = require('./defined')
 const eq = require('./eq')
+const errorMessage = require('./error-message')
 const exact = require('./exact')
 const finite = require('./finite')
 const gt = require('./gt')
@@ -53,6 +54,7 @@ module.exports = {
   dateString,
   defined,
   eq,
+  errorMessage,
   exact,
   finite,
   gt,
