@@ -4,12 +4,11 @@ import $ from '../'
 
 type My = {
   defaultA?: NilOr<number>,
-  defaultB?: NilOr<number>,
-  [key: string]: number
-}
+  defaultB?: NilOr<number>
+} & { [key: string]: number }
 
 const my: Assert<My> =
-  value => {
+  (value: unknown) => {
     const { defaultA, defaultB, ...rest } = $.object({
       defaultA: $.nilOr($.number),
       defaultB: $.nilOr($.number)
@@ -18,11 +17,12 @@ const my: Assert<My> =
       ...$.indexer($.string, $.number)(rest),
       defaultA,
       defaultB
-    }
+    } as My
   }
 
 test('indexer', () => {
-  expect(my({ defaultA: null, defaultB: 1, a: 1 })).toEqual({
+  const value = my({ defaultA: null, defaultB: 1, a: 1 })
+  expect(value).toEqual({
     defaultA: null,
     defaultB: 1,
     a: 1
