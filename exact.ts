@@ -9,7 +9,11 @@ type Result<T> = {
 }
 
 export const exact =
-  <T extends { [key: string]: Assert<unknown> }>(kvs: T): Assert<Result<T>> =>
+  <T extends { [ key: string ]: Assert<unknown> }>(kvs: T): Assert<{
+    [ K in keyof T ]: T[ K ] extends Assert<unknown> ?
+      ReturnType<T[ K ]> :
+      never
+  }> =>
     value => {
       if (value === null || typeof value !== 'object') {
         throw new TypeError(`Expected object, got ${inspect(value)}.`)
