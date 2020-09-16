@@ -4,9 +4,10 @@
   "description": "Assertion combinators.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && flow check && jest",
+    "test": "eslint . && tsc --noEmit && jest",
     "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags",
-    "update": "npm-check --update --save-exact"
+    "update": "npm-check --update --save-exact",
+    "prepublishOnly": "tsc"
   },
   "keywords": [],
   "author": "Mirek Rusin <mirek@me.com> (https://github.com/mirek)",
@@ -14,24 +15,39 @@
   "devDependencies": {
     "@appliedblockchain/changelog": "1.2.0",
     "@appliedblockchain/eslint-config": "2.6.0",
-    "eslint": "7.3.1",
-    "eslint-plugin-jest": "23.17.1",
-    "flow-bin": "0.128.0",
-    "jest": "26.1.0",
-    "npm-check": "5.9.2"
+    "@tsconfig/node12": "1.0.7",
+    "@types/jest": "26.0.13",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "eslint": "7.8.1",
+    "eslint-plugin-jest": "23.20.0",
+    "jest": "26.4.2",
+    "npm-check": "5.9.2",
+    "ts-jest": "26.3.0",
+    "typescript": "4.0.2"
   },
   "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/wip/"
     ]
   },
   "eslintConfig": {
-    "extends": "@appliedblockchain"
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "@appliedblockchain"
+    ]
   },
   "eslintIgnore": [
-    "flow-typed/*",
     "wip/*",
-    "docs/*"
+    "docs/*",
+    "*.js"
   ]
 }
