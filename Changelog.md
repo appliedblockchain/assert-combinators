@@ -1,5 +1,15 @@
 # Changelog
 
+## [v3.0.0](../../compare/v2.5.0...v3.0.0) (2020-09-16)
+
+* Bumping npms.
+* Inline object and exact result so vscode expands type on hover...
+* Minor fixes.
+* Minor fixes.
+* Adding vscode settings.
+* Moving to ts.
+* Updating changelog.
+
 ## [v2.5.0](../../compare/v2.4.0...v2.5.0) (2020-06-28)
 
 * Adding error-message test.
