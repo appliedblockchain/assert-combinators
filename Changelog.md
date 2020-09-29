@@ -1,5 +1,10 @@
 # Changelog
 
+## [v3.0.1](../../compare/v3.0.0...v3.0.1) (2020-09-29)
+
+* Minor updates.
+* Updating changelog.
+
 ## [v3.0.0](../../compare/v2.5.0...v3.0.0) (2020-09-16)
 
 * Bumping npms.
