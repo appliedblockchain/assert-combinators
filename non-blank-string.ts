@@ -1,6 +1,5 @@
-
-import Assert from './types/assert'
 import { inspect } from 'util'
+import type Assert from './types/assert'
 
 export const nonBlankString: Assert<string> =
   value => {
