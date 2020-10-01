@@ -16,7 +16,7 @@ import implies from './implies'
 import in_ from './in'
 import indexer from './indexer'
 import instance from './instance'
-import kv from './kv'
+import keyed from './keyed'
 import lt from './lt'
 import lte from './lte'
 import map from './map'
@@ -62,7 +62,7 @@ export default {
   in: in_,
   indexer,
   instance,
-  kv,
+  keyed,
   lt,
   lte,
   map,
