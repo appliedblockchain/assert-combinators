@@ -7,7 +7,7 @@ import type Keyed from './types/keyed'
 export const keyed =
   <T>(a: Assert<T>): Assert<Keyed<T>> =>
     value => {
-      if (value === null || typeof value !== 'object') {
+      if (value === null || typeof value !== 'object' || Array.isArray(value)) {
         throw new TypeError(`Expected object, got ${inspect(value)}.`)
       }
       const value_ = value as Record<string, unknown>
