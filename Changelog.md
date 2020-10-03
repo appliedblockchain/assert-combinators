@@ -1,5 +1,15 @@
 # Changelog
 
+## [v3.1.0](../../compare/v3.0.1...v3.1.0) (2020-10-03)
+
+* Use unknown as default type parameter for keyed.
+* Check for array in keyed.
+* Renaming kv to keyed.
+* Adding async-return-type utility type.
+* Adding awaited utility type.
+* Adding kv and null-or, undefined-or utility types.
+* Updating changelog.
+
 ## [v3.0.1](../../compare/v3.0.0...v3.0.1) (2020-09-29)
 
 * Minor updates.
