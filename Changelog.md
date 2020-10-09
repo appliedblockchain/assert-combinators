@@ -1,5 +1,11 @@
 # Changelog
 
+## [v3.1.1](../../compare/v3.1.0...v3.1.1) (2020-10-09)
+
+* Adding export.
+* Adding .github to npm ignore.
+* Updating changelog.
+
 ## [v3.1.0](../../compare/v3.0.1...v3.1.0) (2020-10-03)
 
 * Use unknown as default type parameter for keyed.
