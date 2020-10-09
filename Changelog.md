@@ -1,5 +1,10 @@
 # Changelog
 
+## [v3.1.3](../../compare/v3.1.2...v3.1.3) (2020-10-09)
+
+* Renaming expand to alias.
+* Updating changelog.
+
 ## [v3.1.2](../../compare/v3.1.1...v3.1.2) (2020-10-09)
 
 * Adding expand type.
