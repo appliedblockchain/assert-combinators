@@ -1,5 +1,10 @@
 # Changelog
 
+## [v3.2.0](../../compare/v3.1.3...v3.2.0) (2020-10-14)
+
+* Adding strftime.
+* Updating changelog.
+
 ## [v3.1.3](../../compare/v3.1.2...v3.1.3) (2020-10-09)
 
 * Renaming expand to alias.
