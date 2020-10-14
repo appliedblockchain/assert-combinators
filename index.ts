@@ -36,6 +36,7 @@ import rethrow from './rethrow'
 import safeInteger from './safe-integer'
 import sequence from './sequence'
 import shape from './shape'
+import strftime from './strftime'
 import string from './string'
 import tuple from './tuple'
 import undefined_ from './undefined'
@@ -82,6 +83,7 @@ export {
   safeInteger,
   sequence,
   shape,
+  strftime,
   string,
   tuple,
   undefined_ as undefined,
@@ -129,6 +131,7 @@ export default {
   safeInteger,
   sequence,
   shape,
+  strftime,
   string,
   tuple,
   undefined: undefined_,
