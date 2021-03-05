@@ -30,6 +30,7 @@ import object from './object'
 import ok from './ok'
 import oneOf from './one-of'
 import or from './or'
+import positive from './positive'
 import predicate from './predicate'
 import regexp from './regexp'
 import rethrow from './rethrow'
@@ -39,6 +40,16 @@ import shape from './shape'
 import strftime from './strftime'
 import string from './string'
 import tuple from './tuple'
+import type Alias from './types/alias'
+import type Assert from './types/assert'
+import type AsyncReturnType from './types/async-return-type'
+import type Awaited from './types/awaited'
+import type Keyed from './types/keyed'
+import type Maybe from './types/maybe'
+import type NilOr from './types/nil-or'
+import type NullOr from './types/null-or'
+import type Predicate from './types/predicate'
+import type UndefinedOr from './types/undefined-or'
 import undefined_ from './undefined'
 import undefinedOr from './undefined-or'
 import unique from './unique'
@@ -77,6 +88,7 @@ export {
   ok,
   oneOf,
   or,
+  positive,
   predicate,
   regexp,
   rethrow,
@@ -89,7 +101,17 @@ export {
   undefined_ as undefined,
   undefinedOr,
   unique,
-  unknown
+  unknown,
+  Alias,
+  Assert,
+  AsyncReturnType,
+  Awaited,
+  Keyed,
+  Maybe,
+  NilOr,
+  NullOr,
+  Predicate,
+  UndefinedOr
 }
 
 export default {
@@ -125,6 +147,7 @@ export default {
   ok,
   oneOf,
   or,
+  positive,
   predicate,
   regexp,
   rethrow,

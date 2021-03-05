@@ -1,9 +1,7 @@
 {
   "files.exclude": {
-    "*.js": true,
-    "helpers/*.js": true,
-    "test/*.js": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
+  }
 }

@@ -11,6 +11,6 @@ test('simple', () => {
   expect(() => $.strftime('%Y-%m-%d')('2000-13-01')).toThrow(
     'Expected \'%Y-%m-%d\' strftime format, got \'2000-13-01\', failed at index 5, unrecognised part \'13-01\'.'
   )
-  let d = new Date().toISOString()
+  const d = new Date().toISOString()
   expect($.strftime('%FT%T.%sZ')(d)).toEqual(d)
 })
