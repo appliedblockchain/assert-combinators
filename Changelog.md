@@ -1,5 +1,10 @@
 # Changelog
 
+## [v3.3.1](../../compare/v3.3.0...v3.3.1) (2021-03-08)
+
+* Use isolated modules.
+* Updating changelog.
+
 ## [v3.3.0](../../compare/v3.2.0...v3.3.0) (2021-03-05)
 
 * Adding positive, bumping npms, exporting utility types.
