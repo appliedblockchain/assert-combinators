@@ -55,6 +55,19 @@ import undefinedOr from './undefined-or'
 import unique from './unique'
 import unknown from './unknown'
 
+export type {
+  Alias,
+  Assert,
+  AsyncReturnType,
+  Awaited,
+  Keyed,
+  Maybe,
+  NilOr,
+  NullOr,
+  Predicate,
+  UndefinedOr
+}
+
 export {
   and,
   array,
@@ -101,17 +114,7 @@ export {
   undefined_ as undefined,
   undefinedOr,
   unique,
-  unknown,
-  Alias,
-  Assert,
-  AsyncReturnType,
-  Awaited,
-  Keyed,
-  Maybe,
-  NilOr,
-  NullOr,
-  Predicate,
-  UndefinedOr
+  unknown
 }
 
 export default {

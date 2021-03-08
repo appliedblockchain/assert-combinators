@@ -9,6 +9,7 @@
     "resolveJsonModule": true,
     "inlineSources": true,
     "inlineSourceMap": true,
+    "isolatedModules": true
   },
   "include": [
     "**/*"
