@@ -48,6 +48,8 @@ Strftime formatted string | `string`<sup>[weaker](#not-precise-types)</sup> | `$
 ## Examples
 
 ```ts
+import * as $ from '@appliedblockchain/assert-combinators'
+
 ws.on('message', _ => {
 
   const { method, agree } = $.object({
