@@ -1,5 +1,11 @@
 # Changelog
 
+## [v3.3.2](../../compare/v3.3.1...v3.3.2) (2021-05-19)
+
+* Adding record.
+* Updating readme.
+* Updating changelog.
+
 ## [v3.3.1](../../compare/v3.3.0...v3.3.1) (2021-03-08)
 
 * Use isolated modules.
