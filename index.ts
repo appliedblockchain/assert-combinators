@@ -32,6 +32,7 @@ import oneOf from './one-of'
 import or from './or'
 import positive from './positive'
 import predicate from './predicate'
+import record from './record'
 import regexp from './regexp'
 import rethrow from './rethrow'
 import safeInteger from './safe-integer'
@@ -103,6 +104,7 @@ export {
   or,
   positive,
   predicate,
+  record,
   regexp,
   rethrow,
   safeInteger,
@@ -152,6 +154,7 @@ export default {
   or,
   positive,
   predicate,
+  record,
   regexp,
   rethrow,
   safeInteger,

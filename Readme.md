@@ -17,7 +17,7 @@ Unknown                   | `unknown`                                       | `$
 Array                     | `A[]`                                           | `$.array(a)`
 Object                    | `{ a: A, b: B }`                                | `$.object({ a, b })`
 Exact object              | `{ a: A, b: B }`                                | `$.exact({ a, b })`
-Record                    | `Record<K, V>`                                  | `$.indexer(k, v)`
+Record                    | `Record<K, V>`                                  | `$.record(k, v)`
 Keyed object              | `Record<string, undefined \| V>`                | `$.keyed(v)`
 Intersection              | `A & B`                                         | `$.and(a, b)`
 Union                     | `A \| B`                                        | `$.or(a, b)`
@@ -74,7 +74,7 @@ For example `$.finite` asserts that the value is not only a `number` but also th
 
 Unlike Flow, TypeScript doesn't directly support opaque types.
 
-However, they can be emulated by intersecting with object containing unique property type.
+However, they can be emulated by intersecting with object containing unique property type which exists in static type system only. It does not exist in runtime value.
 
 ```ts
 type Finite = number & { readonly _tag: 'Finite' }
