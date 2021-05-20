@@ -1,5 +1,11 @@
 # Changelog
 
+## [v3.4.0](../../compare/v3.3.2...v3.4.0) (2021-05-20)
+
+* Node 14 target, bumping deps.
+* Adding import.
+* Updating changelog.
+
 ## [v3.3.2](../../compare/v3.3.1...v3.3.2) (2021-05-19)
 
 * Adding record.
