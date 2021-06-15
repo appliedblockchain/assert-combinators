@@ -3,7 +3,7 @@ import { inspect } from 'util'
 
 type Identity<T> = (value: T) => T
 
-export const predicate: (f: Predicate<unknown>, name?: string) => Identity<unknown> =
+const predicate: (f: Predicate<unknown>, name?: string) => Identity<unknown> =
   (f, name) =>
     value => {
       if (!f(value)) {

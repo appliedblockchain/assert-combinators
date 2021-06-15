@@ -8,7 +8,7 @@ type Result<T> = {
     never
 }
 
-export const object =
+const object =
   <T extends { [ key: string ]: Assert<unknown> }>(kvs: T): Assert<{
     [ K in keyof T ]: T[ K ] extends Assert<unknown> ?
       ReturnType<T[ K ]> :

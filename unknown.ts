@@ -1,6 +1,6 @@
 import type Assert from './types/assert'
 
-export const unknown: Assert<unknown> =
+const unknown: Assert<unknown> =
   value =>
     value
 

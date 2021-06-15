@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const in_ =
+const in_ =
   <T>(values: T[]): Assert<T> =>
     value => {
       if (!values.includes(value as T)) {

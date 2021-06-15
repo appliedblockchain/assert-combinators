@@ -1,8 +1,8 @@
 import $ from '../'
 
 test('unique', () => {
-  expect(() => $.unique()([ 'b', 'a', 'c', 'a' ])).toThrow('Expected unique values, got duplicate \'a\'.')
-  expect($.unique()([ 'b', 'c', 'a' ])).toEqual([ 'b', 'c', 'a' ])
+  expect(() => $.unique(_ => String(_))([ 'b', 'a', 'c', 'a' ])).toThrow('Expected unique values, got duplicate \'a\'.')
+  expect($.unique(_ => String(_))([ 'b', 'c', 'a' ])).toEqual([ 'b', 'c', 'a' ])
 })
 
 test('unique objects', () => {

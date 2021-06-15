@@ -2,7 +2,7 @@ import rethrow from './rethrow'
 import type Assert from './types/assert'
 import type NilOr from './types/nil-or'
 
-export const nilOr =
+const nilOr =
   <T>(a: Assert<T>): Assert<NilOr<T>> =>
     value =>
       value == null ?

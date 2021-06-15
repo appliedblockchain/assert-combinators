@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const null_: Assert<null> =
+const null_: Assert<null> =
   value => {
     if (value !== null) {
       throw new TypeError(`Expected null, got ${inspect(value)}.`)

@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const or: <T extends Assert<unknown>[]>(...as: T) => T[number] =
+const or: <T extends Assert<unknown>[]>(...as: T) => T[number] =
   (...as) =>
     value => {
       for (const a of as) {

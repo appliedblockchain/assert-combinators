@@ -1,6 +1,5 @@
 import and from './and'
 import array from './array'
-import assert from './assert'
 import boolean from './boolean'
 import clone from './clone'
 import dateString from './date-string'
@@ -14,7 +13,6 @@ import gte from './gte'
 import if_ from './if'
 import implies from './implies'
 import in_ from './in'
-import indexer from './indexer'
 import instance from './instance'
 import keyed from './keyed'
 import lt from './lt'
@@ -37,17 +35,15 @@ import regexp from './regexp'
 import rethrow from './rethrow'
 import safeInteger from './safe-integer'
 import sequence from './sequence'
-import shape from './shape'
+import partial from './partial'
 import strftime from './strftime'
 import string from './string'
 import tuple from './tuple'
 import type Alias from './types/alias'
 import type Assert from './types/assert'
 import type Asserted from './asserted'
-import type AsyncReturnType from './types/async-return-type'
 import type Awaited from './types/awaited'
 import type Keyed from './types/keyed'
-import type Maybe from './types/maybe'
 import type NilOr from './types/nil-or'
 import type NullOr from './types/null-or'
 import type Predicate from './types/predicate'
@@ -61,10 +57,8 @@ export type {
   Alias,
   Assert,
   Asserted,
-  AsyncReturnType,
   Awaited,
   Keyed,
-  Maybe,
   NilOr,
   NullOr,
   Predicate,
@@ -74,7 +68,6 @@ export type {
 export {
   and,
   array,
-  assert,
   boolean,
   clone,
   dateString,
@@ -88,7 +81,6 @@ export {
   if_ as if,
   implies,
   in_ as in,
-  indexer,
   instance,
   keyed,
   lt,
@@ -111,7 +103,7 @@ export {
   rethrow,
   safeInteger,
   sequence,
-  shape,
+  partial,
   strftime,
   string,
   tuple,
@@ -124,7 +116,6 @@ export {
 export default {
   and,
   array,
-  assert,
   boolean,
   clone,
   dateString,
@@ -138,7 +129,6 @@ export default {
   if: if_,
   implies,
   in: in_,
-  indexer,
   instance,
   keyed,
   lt,
@@ -161,7 +151,7 @@ export default {
   rethrow,
   safeInteger,
   sequence,
-  shape,
+  partial,
   strftime,
   string,
   tuple,

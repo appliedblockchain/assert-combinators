@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const regexp: (re: RegExp) => Assert<string> =
+const regexp: (re: RegExp) => Assert<string> =
   re =>
     value => {
       if (typeof value !== 'string') {

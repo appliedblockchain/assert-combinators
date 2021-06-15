@@ -1,7 +1,8 @@
 import type Assert from './types/assert'
-import type Maybe from './types/maybe'
+import type NilOr from './types/nil-or'
 
-export const errorMessage: <T>(a: Assert<T>) => Assert<Maybe<string>> =
+// TODO: Remove in favour of error-of.
+const errorMessage: <T>(a: Assert<T>) => Assert<NilOr<string>> =
   (a) =>
     value => {
       try {

@@ -3,7 +3,7 @@ import { inspect } from 'util'
 
 const re = /^\d{4}-\d{2}-\d{2}$/
 
-export const dateString: Assert<string> =
+const dateString: Assert<string> =
   value => {
     if (typeof value !== 'string') {
       throw new TypeError(`Expected string, got ${inspect(value)}.`)

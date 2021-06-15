@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const eq =
+const eq =
   <T>(expected: T): Assert<T> =>
     value => {
       if (value !== expected) {

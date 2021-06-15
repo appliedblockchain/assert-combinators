@@ -5,12 +5,13 @@ import $ from '../'
 export type Range = [ number, number ]
 
 const range: Assert<Range> =
-  $.assert(
+  $.sequence(
     $.tuple($.number, $.number),
-    ([ a, b ]) => {
-      if (a > b) {
-        throw new TypeError(`Expected [a, b] range where a <= b, got ${inspect([ a, b ])}.`)
+    _ => {
+      if (_[0] > _[1]) {
+        throw new TypeError(`Expected [a, b] range where a <= b, got ${inspect(_)}.`)
       }
+      return _
     }
   )
 

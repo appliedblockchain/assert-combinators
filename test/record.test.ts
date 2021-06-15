@@ -1,6 +1,6 @@
 import type Assert from '../types/assert'
 import type NilOr from '../types/nil-or'
-import $ from '../'
+import $ from '..'
 
 type My = {
   defaultA?: NilOr<number>,
@@ -14,7 +14,7 @@ const my: Assert<My> =
       defaultB: $.nilOr($.number)
     })(value)
     return {
-      ...$.indexer($.string, $.number)(rest),
+      ...$.record($.string, $.number)(rest),
       defaultA,
       defaultB
     } as My

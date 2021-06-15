@@ -1,4 +1,4 @@
-export const identity =
+const identity =
   <T>(value: T): T =>
     value
 

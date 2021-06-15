@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const tuple =
+const tuple =
   <T extends [...Assert<unknown>[]]>(...as: T) =>
     (value: unknown): { [I in keyof T]: T[I] extends Assert<unknown> ? ReturnType<T[I]> : never } & { length: T['length'] } => {
       if (!Array.isArray(value)) {

@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const instance =
+const instance =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   <T extends new (...args: any[]) => any>(class_: T): Assert<InstanceType<T>> =>
     value => {

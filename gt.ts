@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const gt: (than: number) => Assert<number> =
+const gt: (than: number) => Assert<number> =
   than =>
     value => {
       if (typeof value !== 'number') {

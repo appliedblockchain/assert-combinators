@@ -1,7 +1,7 @@
 import { inspect } from 'util'
 import type Assert from './types/assert'
 
-export const positive: Assert<number> =
+const positive: Assert<number> =
   value => {
     if (typeof value !== 'number') {
       throw new TypeError(`Expected number, got ${inspect(value)}.`)

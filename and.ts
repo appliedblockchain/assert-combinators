@@ -9,7 +9,7 @@ interface And {
   <A, B, C, D>(a: $<A>, b: $<B>, c: $<C>, d: $<D>): $<A & B & C & D>
 }
 
-export const and: And =
+const and: And =
   (...as: Assert<unknown>[]) =>
     (value: unknown) => {
       for (const a of as) {

@@ -64,7 +64,7 @@ type Token =
   | { type: 'regexp', value: RegExp }
   | { type: 'literal', value: string }
 
-export const tokens =
+const tokens =
   function *(value: string): Generator<Token> {
     let j = 0
     let i = 0
@@ -92,7 +92,7 @@ export const tokens =
     }
   }
 
-export const strftime =
+const strftime =
   (f: string): Assert<string> => {
     if (typeof f !== 'string') {
       throw new TypeError(`Expected format string, got ${inspect(f)}.`)

@@ -8,7 +8,7 @@ type Result<T> = {
   never
 }
 
-export const clone =
+const clone =
   <T extends { [key: string]: Assert<unknown> }>(kvs: T): Assert<Result<T>> =>
     value => {
       if (value == null || typeof value !== 'object') {

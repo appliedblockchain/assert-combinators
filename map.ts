@@ -1,7 +1,7 @@
 import type Assert from './types/assert'
 import { inspect } from 'util'
 
-export const map: <T>(a: Assert<T>) => Assert<T[]> =
+const map: <T>(a: Assert<T>) => Assert<T[]> =
   a =>
     values => {
       if (!Array.isArray(values)) {

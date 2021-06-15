@@ -2,7 +2,7 @@ import type Assert from './types/assert'
 import unknown from './unknown'
 import rethrow from './helpers/rethrow'
 
-export const array: <T>(a: Assert<T>) => Assert<T[]> =
+const array: <T>(a: Assert<T>) => Assert<T[]> =
   a =>
     value => {
       if (!Array.isArray(value)) {

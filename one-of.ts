@@ -6,7 +6,7 @@ import { inspect } from 'util'
  *
  * @example
  *   import * as $ from '@appliedblockchain/assert-combinators'
- *   export const assert = $.oneOf('A', 'B', 'C')
+ *   const assert = $.oneOf('A', 'B', 'C')
  *   export type T = $.Asserted<typeof assert>
  *   // type T is 'A' | 'B' | 'C'
  *

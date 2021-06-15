@@ -1,15 +1,12 @@
-import type Assert from './types/assert'
 import { inspect } from 'util'
+import type Assert from './types/assert'
+import type Primitive from './types/primitive'
 
-type Mapping<A, B> = (value: A) => B
-
-export const identity =
-  <T>(_: T): T =>
-    _
+type Mapping<A, B extends Primitive> = (value: A) => B
 
 /** Asserts unique array using given `f` mapping from array elements to `===` comparable values (defaults to identity). */
-export const unique =
-  <T>(f: Mapping<T, unknown> = identity): Assert<T[]> =>
+const unique =
+  <T, R extends Primitive>(f: Mapping<T, R>): Assert<T[]> =>
     values => {
       if (!Array.isArray(values)) {
         throw new TypeError(`Expected array, got ${inspect(values)}.`)

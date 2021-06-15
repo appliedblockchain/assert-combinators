@@ -1,4 +1,4 @@
-export const rethrow: (message: string) => (err: Error) => void =
+const rethrow: (message: string) => (err: Error) => void =
   message =>
     err => {
 

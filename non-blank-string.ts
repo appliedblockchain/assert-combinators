@@ -1,7 +1,7 @@
 import { inspect } from 'util'
 import type Assert from './types/assert'
 
-export const nonBlankString: Assert<string> =
+const nonBlankString: Assert<string> =
   value => {
     if (typeof value !== 'string' || value.trim() === '') {
       throw new TypeError(`Expected non-blank string, got ${inspect(value)}`)
