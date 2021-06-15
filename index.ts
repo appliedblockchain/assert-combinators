@@ -43,6 +43,7 @@ import string from './string'
 import tuple from './tuple'
 import type Alias from './types/alias'
 import type Assert from './types/assert'
+import type Asserted from './asserted'
 import type AsyncReturnType from './types/async-return-type'
 import type Awaited from './types/awaited'
 import type Keyed from './types/keyed'
@@ -59,6 +60,7 @@ import unknown from './unknown'
 export type {
   Alias,
   Assert,
+  Asserted,
   AsyncReturnType,
   Awaited,
   Keyed,
