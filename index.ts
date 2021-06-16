@@ -10,6 +10,7 @@ import finite from './finite'
 import gt from './gt'
 import gte from './gte'
 import if_ from './if'
+import ignore from './ignore'
 import implies from './implies'
 import in_ from './in'
 import instance from './instance'
@@ -78,6 +79,7 @@ export {
   gt,
   gte,
   if_ as if,
+  ignore,
   implies,
   in_ as in,
   instance,
