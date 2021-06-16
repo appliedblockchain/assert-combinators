@@ -1,11 +1,10 @@
 import and from './and'
 import array from './array'
 import boolean from './boolean'
-import clone from './clone'
 import dateString from './date-string'
 import defined from './defined'
 import eq from './eq'
-import errorMessage from './error-message'
+import errorOf from './error-of'
 import exact from './exact'
 import finite from './finite'
 import gt from './gt'
@@ -17,7 +16,6 @@ import instance from './instance'
 import keyed from './keyed'
 import lt from './lt'
 import lte from './lte'
-import map from './map'
 import nil from './nil'
 import nilOr from './nil-or'
 import nonBlankString from './non-blank-string'
@@ -71,11 +69,10 @@ export {
   and,
   array,
   boolean,
-  clone,
   dateString,
   defined,
   eq,
-  errorMessage,
+  errorOf,
   exact,
   finite,
   gt,
@@ -87,7 +84,6 @@ export {
   keyed,
   lt,
   lte,
-  map,
   nil,
   nilOr,
   nonBlankString,

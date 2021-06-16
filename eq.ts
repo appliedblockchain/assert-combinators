@@ -1,8 +1,9 @@
-import type Assert from './types/assert'
 import { inspect } from 'util'
+import type Assert from './types/assert'
+import type Primitive from './types/primitive'
 
 const eq =
-  <T>(expected: T): Assert<T> =>
+  <T extends Primitive>(expected: T): Assert<T> =>
     value => {
       if (value !== expected) {
         throw new TypeError(`Expected ${inspect(expected)}, got ${inspect(value)}.`)
