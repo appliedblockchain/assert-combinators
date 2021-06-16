@@ -20,10 +20,11 @@ Exact object              | `{ a: A, b: B }`                                | `$
 Record                    | `Record<K, V>`                                  | `$.record(k, v)`
 Keyed object              | `Record<string, undefined \| V>`                | `$.keyed(v)`
 Intersection              | `A & B`                                         | `$.and(a, b)`
+Primitive type union      | `'A' \| 'B'`                                    | `$.oneOf('A', 'B')`
 Union                     | `A \| B`                                        | `$.or(a, b)`
 Date string `YYYY-MM-DD`  | `string`<sup>[weaker](#not-precise-types)</sup> | `$.dateString`
 Defined                   | `Exclude<A, undefined>`                         | `$.defined(a)`
-Literal                   | `"foo"`, `42`                                   | `$.eq('foo')`, `$.eq(42)`
+Literal primitive         | `"foo"`, `42`                                   | `$.eq('foo')`, `$.eq(42)`
 Tuple                     | `[number, string]`                              | `$.tuple($.number, $.string)`
 Finite number             | `number`<sup>[weaker](#not-precise-types)</sup> | `$.finite`
 Positive number           | `number`<sup>[weaker](#not-precise-types)</sup> | `$.positive`
@@ -37,11 +38,11 @@ Strftime formatted string | `string`<sup>[weaker](#not-precise-types)</sup> | `$
 
 ## Utility functions
 
+* errorOf – instead of throwing, returns Error or undefined if assertion passes.
 * identity
 * if
 * implies
 * in
-* indexer
 * predicate
 * rethrow
 
@@ -86,6 +87,22 @@ Opaque types allow to design code in such a way that value of the type can be cr
 
 Good examples of opaque type candidates are `NonEmptyArray<T>`, `Positive`, `Email`.
 `ValidatedEmail` – ie. an email that passed some async validation can be used to annotate function parameter for functions that should be used only for validated emails – without the need for re-validating email in each function's body.
+
+## Optional tuple tail
+
+When tail of tuple accepts undefined values, resulting tuple may have shorter length than arity of assertion function.
+
+```ts
+const assertMyTuple = $.tuple($.string, $.undefinedOr($.number))
+assertMyTuple([ 'foo' ]) // ok
+assertMyTuple([ 'foo', 1 ]) // ok
+```
+
+A good rule of thumb is to destructure tuple elements if it accepts undefined at tail position to make sure the code doesn't rely on the length, ie:
+
+```ts
+const [ myString, maybeNumber ] = assertMyTuple(input)
+```
 
 ## License
 
