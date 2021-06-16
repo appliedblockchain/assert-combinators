@@ -1,5 +1,20 @@
 # Changelog
 
+## [v4.0.0](../../compare/v3.4.0...v4.0.0) (2021-06-16)
+
+* Updating tuple.
+* Test on prepublishOnly.
+* Bumping deps.
+* Simplifying object type.
+* Simplifying exact types.
+* Dropping rethrow helper.
+* Dropping clone, map, error-message. Adding error-of. Eq on primitive.
+* Dropping default export, fixing partial.
+* Cleanups.
+* Adding asserted.
+* Assert primitive type union in one-of.
+* Updating changelog.
+
 ## [v3.4.0](../../compare/v3.3.2...v3.4.0) (2021-05-20)
 
 * Node 14 target, bumping deps.
