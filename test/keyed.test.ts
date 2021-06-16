@@ -1,4 +1,4 @@
-import $ from '..'
+import * as $ from '..'
 
 test('keyed', () => {
   expect($.keyed($.boolean)(JSON.parse('{"foo":true,"bar":false}'))).toEqual({

@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('exact ok', () => {
   const value = $.exact({ foo: $.string, bar: $.number })(JSON.parse('{"foo":"a","bar":1}'))

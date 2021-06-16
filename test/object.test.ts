@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('object', () => {
   const r = $.object({ foo: $.string, bar: $.number })(JSON.parse('{"foo":"a","bar":1}'))

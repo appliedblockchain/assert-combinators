@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('simple', () => {
   expect($.strftime('%Y-%m-%d')('2000-01-01')).toEqual('2000-01-01')

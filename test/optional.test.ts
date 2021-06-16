@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('nilOr', () => {
   expect(() => $.object({ foo: $.nilOr($.number) })({ foo: 'bar' }))

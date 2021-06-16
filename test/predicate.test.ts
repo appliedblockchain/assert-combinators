@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 const user =
   $.object({ name: $.string, role: $.string })

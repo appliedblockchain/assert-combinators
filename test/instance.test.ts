@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 import { inspect } from 'util'
 
 class Shape {

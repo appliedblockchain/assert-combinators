@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('tuple', () => {
   const r = $.tuple($.number, $.string)(JSON.parse('[1,"foo"]'))

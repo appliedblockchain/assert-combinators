@@ -1,6 +1,6 @@
 import type Assert from '../types/assert'
 import type NilOr from '../types/nil-or'
-import $ from '..'
+import * as $ from '..'
 
 type My = {
   defaultA?: NilOr<number>,

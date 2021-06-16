@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('array', () => {
   const r: string[] = $.array($.string)(JSON.parse('["a","b"]'))

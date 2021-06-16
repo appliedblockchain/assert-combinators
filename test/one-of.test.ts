@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 const upper =
   (_: string): string =>

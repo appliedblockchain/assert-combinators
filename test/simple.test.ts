@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('array of strings', () => {
   expect(() => $.array($.string)(JSON.parse('["a", "b"]'))).not.toThrow()

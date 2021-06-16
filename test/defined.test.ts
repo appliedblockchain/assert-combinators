@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('defined', () => {
   const a = $.object({ foo: $.defined })

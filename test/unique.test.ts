@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('unique', () => {
   expect(() => $.unique(_ => String(_))([ 'b', 'a', 'c', 'a' ])).toThrow('Expected unique values, got duplicate \'a\'.')

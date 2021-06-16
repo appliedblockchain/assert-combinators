@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('errorMessage', () => {
   expect($.errorMessage($.string)('foo')).toEqual(null)

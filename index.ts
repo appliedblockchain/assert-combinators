@@ -28,6 +28,7 @@ import object from './object'
 import ok from './ok'
 import oneOf from './one-of'
 import or from './or'
+import partial from './partial'
 import positive from './positive'
 import predicate from './predicate'
 import record from './record'
@@ -35,18 +36,18 @@ import regexp from './regexp'
 import rethrow from './rethrow'
 import safeInteger from './safe-integer'
 import sequence from './sequence'
-import partial from './partial'
 import strftime from './strftime'
 import string from './string'
 import tuple from './tuple'
 import type Alias from './types/alias'
 import type Assert from './types/assert'
-import type Asserted from './asserted'
+import type Asserted from './types/asserted'
 import type Awaited from './types/awaited'
 import type Keyed from './types/keyed'
 import type NilOr from './types/nil-or'
 import type NullOr from './types/null-or'
 import type Predicate from './types/predicate'
+import type Primitive from './types/primitive'
 import type UndefinedOr from './types/undefined-or'
 import undefined_ from './undefined'
 import undefinedOr from './undefined-or'
@@ -62,6 +63,7 @@ export type {
   NilOr,
   NullOr,
   Predicate,
+  Primitive,
   UndefinedOr
 }
 
@@ -96,6 +98,7 @@ export {
   ok,
   oneOf,
   or,
+  partial,
   positive,
   predicate,
   record,
@@ -103,59 +106,10 @@ export {
   rethrow,
   safeInteger,
   sequence,
-  partial,
   strftime,
   string,
   tuple,
   undefined_ as undefined,
-  undefinedOr,
-  unique,
-  unknown
-}
-
-export default {
-  and,
-  array,
-  boolean,
-  clone,
-  dateString,
-  defined,
-  eq,
-  errorMessage,
-  exact,
-  finite,
-  gt,
-  gte,
-  if: if_,
-  implies,
-  in: in_,
-  instance,
-  keyed,
-  lt,
-  lte,
-  map,
-  nil,
-  nilOr,
-  nonBlankString,
-  null: null_,
-  nullOr,
-  number,
-  object,
-  ok,
-  oneOf,
-  or,
-  positive,
-  predicate,
-  record,
-  regexp,
-  rethrow,
-  safeInteger,
-  sequence,
-  partial,
-  strftime,
-  string,
-  tuple,
-  undefined: undefined_,
   undefinedOr,
   unique,
   unknown

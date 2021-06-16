@@ -1,4 +1,4 @@
-import $ from '../'
+import * as $ from '../'
 
 test('and', () => {
   const r: { name: string } = $.and(
