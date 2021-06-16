@@ -1,5 +1,4 @@
 import { inspect } from 'util'
-import rethrow from './helpers/rethrow'
 import type Assert from './types/assert'
 
 type Result<T> = {
@@ -25,7 +24,7 @@ const object =
           try {
             v(value_[k])
           } catch (err) {
-            rethrow(`[${k}]`)(err)
+            throw new TypeError(`[${k}] ${err.message}`)
           }
         } else if (v !== value_[k]) {
           throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect(value_[k])} in ${inspect(value_)} object.`)

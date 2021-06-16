@@ -1,6 +1,5 @@
 import type Assert from './types/assert'
 import unknown from './unknown'
-import rethrow from './helpers/rethrow'
 
 const array: <T>(a: Assert<T>) => Assert<T[]> =
   a =>
@@ -13,7 +12,7 @@ const array: <T>(a: Assert<T>) => Assert<T[]> =
           try {
             a(_)
           } catch (err) {
-            rethrow(`[${i}]`)(err)
+            throw new TypeError(`[${i}] ${err.message}`)
           }
         })
       }
