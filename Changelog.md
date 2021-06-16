@@ -1,5 +1,10 @@
 # Changelog
 
+## [v4.1.1](../../compare/v4.1.0...v4.1.1) (2021-06-16)
+
+* Using noImplicitAny.
+* Updating changelog.
+
 ## [v4.1.0](../../compare/v4.0.0...v4.1.0) (2021-06-16)
 
 * Adding ignore.
