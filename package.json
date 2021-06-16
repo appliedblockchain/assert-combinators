@@ -7,7 +7,7 @@
     "test": "eslint . && tsc && jest",
     "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags",
     "update": "npm-check --update --save-exact",
-    "prepublishOnly": "tsc"
+    "prepublishOnly": "npm test"
   },
   "keywords": [],
   "author": "Mirek Rusin <mirek@me.com> (https://github.com/mirek)",
