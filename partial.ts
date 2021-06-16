@@ -7,11 +7,11 @@ const partial =
       if (typeof value !== 'object' || value == null) {
         throw new TypeError('Expected object.')
       }
-      for (const k of Object.keys(kvs)) {
-        if (typeof value[k] === 'undefined') {
+      for (const k in kvs) {
+        if (typeof (value as Record<string, unknown>)[k] === 'undefined') {
           continue
         }
-        kvs[k](value[k])
+        kvs[k]((value as Record<string, unknown>)[k])
       }
       return value
     }

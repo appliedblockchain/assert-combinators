@@ -8,16 +8,16 @@ const object =
       if (typeof value !== 'object' || value === null) {
         throw new TypeError(`Expected object, got ${inspect(value)}.`)
       }
-      for (const k of Object.keys(kvs)) {
+      for (const k in kvs) {
         const v = kvs[k]
         if (typeof v === 'function') {
           try {
-            v(value[k])
+            v((value as Record<string, unknown>)[k])
           } catch (err) {
             throw new TypeError(`[${k}] ${err.message}`)
           }
-        } else if (v !== value[k]) {
-          throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect(value[k])} in ${inspect(value)} object.`)
+        } else if (v !== (value as Record<string, unknown>)[k]) {
+          throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect((value as Record<string, unknown>)[k])} in ${inspect(value)} object.`)
         }
       }
       return value as { [k in keyof T]: Asserted<T[k]> }
