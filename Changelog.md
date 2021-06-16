@@ -1,5 +1,10 @@
 # Changelog
 
+## [v4.1.0](../../compare/v4.0.0...v4.1.0) (2021-06-16)
+
+* Adding ignore.
+* Updating changelog.
+
 ## [v4.0.0](../../compare/v3.4.0...v4.0.0) (2021-06-16)
 
 * Updating tuple.
