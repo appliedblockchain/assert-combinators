@@ -1,36 +1,26 @@
 import { inspect } from 'util'
 import type Assert from './types/assert'
-
-type Result<T> = {
-  [K in keyof T]: T[K] extends Assert<unknown> ?
-    ReturnType<T[K]> :
-    never
-}
+import type Asserted from './types/asserted'
 
 const object =
-  <T extends { [ key: string ]: Assert<unknown> }>(kvs: T): Assert<{
-    [ K in keyof T ]: T[ K ] extends Assert<unknown> ?
-      ReturnType<T[ K ]> :
-      never
-  }> =>
+  <T extends Record<string, Assert<unknown>>>(kvs: T): Assert<{ [k in keyof T]: Asserted<T[k]> }> =>
     value => {
-      if (value == null || typeof value !== 'object') {
+      if (typeof value !== 'object' || value === null) {
         throw new TypeError(`Expected object, got ${inspect(value)}.`)
       }
-      const value_ = value as { [key: string]: unknown }
       for (const k of Object.keys(kvs)) {
         const v = kvs[k]
         if (typeof v === 'function') {
           try {
-            v(value_[k])
+            v(value[k])
           } catch (err) {
             throw new TypeError(`[${k}] ${err.message}`)
           }
-        } else if (v !== value_[k]) {
-          throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect(value_[k])} in ${inspect(value_)} object.`)
+        } else if (v !== value[k]) {
+          throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect(value[k])} in ${inspect(value)} object.`)
         }
       }
-      return value as Result<T>
+      return value as { [k in keyof T]: Asserted<T[k]> }
     }
 
 export default object
