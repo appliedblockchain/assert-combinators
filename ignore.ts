@@ -7,11 +7,13 @@ const ignore =
       try {
         return a(value)
       } catch (err) {
-        onError?.(
-          err instanceof Error ?
-            err :
-            new Error(String(err))
-        )
+        if (onError) {
+          onError(
+            err instanceof Error ?
+              err :
+              new Error(String(err))
+          )
+        }
         return value as T
       }
     }
