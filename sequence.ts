@@ -2,7 +2,7 @@ import type Assert from './types/assert'
 
 type $<A, B> = (a: A) => B
 
-interface Sequence {
+type Sequence = {
   <A>(a: Assert<A>): Assert<A>
   <A, B>(a: Assert<A>, b: $<A, B>): Assert<B>
   <A, B, C>(a: Assert<A>, b: $<A, B>, c: $<B, C>): Assert<C>

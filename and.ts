@@ -2,7 +2,7 @@ import type Assert from './types/assert'
 
 type $<T> = Assert<T>
 
-interface And {
+type And = {
   <A>(a: $<A>): $<A>
   <A, B>(a: $<A>, b: $<B>): $<A & B>
   <A, B, C>(a: $<A>, b: $<B>, c: $<C>): $<A & B & C>
