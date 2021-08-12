@@ -104,6 +104,32 @@ A good rule of thumb is to destructure tuple elements if it accepts undefined at
 const [ myString, maybeNumber ] = assertMyTuple(input)
 ```
 
+## Exhaustive switch
+
+Use `never` assertion to force exhaustiveness on switch statements:
+
+```ts
+import * as $ from '@appliedblockchain/assert-combinators'
+
+type X = 'a' | 'b' | 'c'
+
+const assertX: $.Assert<X> =
+  $.oneOf('a', 'b', 'c')
+
+const x: X = assertX(JSON.parse('"c"'))
+switch (x) {
+  case 'a':
+  case 'b':
+    console.log(x)
+    break
+  default:
+
+  // Argument of type 'string' is not assignable to parameter of type 'never'.ts(2345)
+  // const x: "c"
+  $.never(x)
+}
+```
+
 ## License
 
 MIT License

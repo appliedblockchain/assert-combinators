@@ -17,6 +17,7 @@ import instance from './instance'
 import keyed from './keyed'
 import lt from './lt'
 import lte from './lte'
+import never_ from './never'
 import nil from './nil'
 import nilOr from './nil-or'
 import nonBlankString from './non-blank-string'
@@ -86,6 +87,7 @@ export {
   keyed,
   lt,
   lte,
+  never_ as never,
   nil,
   nilOr,
   nonBlankString,
