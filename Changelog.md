@@ -1,5 +1,10 @@
 # Changelog
 
+## [v4.2.0](../../compare/v4.1.3...v4.2.0) (2021-08-12)
+
+* Adding never for exhaustive switch.
+* Updating changelog.
+
 ## [v4.1.3](../../compare/v4.1.2...v4.1.3) (2021-06-18)
 
 * Fix: don't use private interfaces.
