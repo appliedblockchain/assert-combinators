@@ -1,6 +1,6 @@
 {
   "name": "@appliedblockchain/assert-combinators",
-  "version": "4.1.3",
+  "version": "4.2.0",
   "description": "Assertion combinators.",
   "main": "index.js",
   "scripts": {
