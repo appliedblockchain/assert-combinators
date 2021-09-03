@@ -1,5 +1,10 @@
 # Changelog
 
+## [v4.3.0](../../compare/v4.2.0...v4.3.0) (2021-09-03)
+
+* Bumping deps.
+* Updating changelog.
+
 ## [v4.2.0](../../compare/v4.1.3...v4.2.0) (2021-08-12)
 
 * Adding never for exhaustive switch.
