@@ -11,8 +11,8 @@ const array: <T>(a: Assert<T>) => Assert<T[]> =
         value.forEach((_, i) => {
           try {
             a(_)
-          } catch (err) {
-            throw new TypeError(`[${i}] ${err.message}`)
+          } catch (err: unknown) {
+            throw new TypeError(`[${i}] ${err instanceof Error ? err.message : err}`)
           }
         })
       }

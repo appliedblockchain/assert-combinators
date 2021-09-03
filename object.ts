@@ -13,8 +13,8 @@ const object =
         if (typeof v === 'function') {
           try {
             v((value as Record<string, unknown>)[k])
-          } catch (err) {
-            throw new TypeError(`[${k}] ${err.message}`)
+          } catch (err: unknown) {
+            throw new TypeError(`[${k}] ${err instanceof Error ? err.message : err}`)
           }
         } else if (v !== (value as Record<string, unknown>)[k]) {
           throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect((value as Record<string, unknown>)[k])} in ${inspect(value)} object.`)

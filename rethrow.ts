@@ -5,8 +5,10 @@ const rethrow: <T>(a: Assert<T>, message: string) => Assert<T> =
     value => {
       try {
         return a(value)
-      } catch (err) {
-        err.message = `${message} ${err.message}`
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          err.message = `${message} ${err.message}`
+        }
         throw err
       }
     }

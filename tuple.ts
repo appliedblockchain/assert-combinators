@@ -14,8 +14,8 @@ const tuple =
       as.forEach((a, i) => {
         try {
           a(value[i])
-        } catch (err) {
-          throw new TypeError(`[${i}] ${err.message}`)
+        } catch (err: unknown) {
+          throw new TypeError(`[${i}] ${err instanceof Error ? err.message : err}`)
         }
       })
       return value as { [I in keyof T]: Asserted<T[I]> }
