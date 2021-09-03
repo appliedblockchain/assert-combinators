@@ -13,7 +13,7 @@ const object =
         if (typeof v === 'function') {
           try {
             v((value as Record<string, unknown>)[k])
-          } catch (err) {
+          } catch (err: any) {
             throw new TypeError(`[${k}] ${err.message}`)
           }
         } else if (v !== (value as Record<string, unknown>)[k]) {

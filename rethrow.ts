@@ -5,7 +5,7 @@ const rethrow: <T>(a: Assert<T>, message: string) => Assert<T> =
     value => {
       try {
         return a(value)
-      } catch (err) {
+      } catch (err: any) {
         err.message = `${message} ${err.message}`
         throw err
       }

@@ -14,7 +14,7 @@ const tuple =
       as.forEach((a, i) => {
         try {
           a(value[i])
-        } catch (err) {
+        } catch (err: any) {
           throw new TypeError(`[${i}] ${err.message}`)
         }
       })
