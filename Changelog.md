@@ -1,5 +1,12 @@
 # Changelog
 
+## [v4.4.0](../../compare/v4.3.0...v4.4.0) (2021-10-16)
+
+* Bumping deps.
+* Publish post version.
+* Fixing typos.
+* Updating changelog.
+
 ## [v4.3.0](../../compare/v4.2.0...v4.3.0) (2021-09-03)
 
 * Bumping deps.
