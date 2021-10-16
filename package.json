@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . && tsc && jest",
-    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags",
+    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags && npm publish",
     "update": "npm-check --update --save-exact",
     "prepublishOnly": "npm test"
   },
