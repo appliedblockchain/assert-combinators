@@ -8,7 +8,7 @@ const lt: (than: number) => Assert<number> =
         throw new TypeError(`Expected number, got ${inspect(value)}.`)
       }
       if (!(value < than)) {
-        throw new TypeError(`Expcted ${inspect(value)} to be less than ${inspect(value)}.`)
+        throw new TypeError(`Expected ${inspect(value)} to be less than ${inspect(than)}.`)
       }
       return value
     }
