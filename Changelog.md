@@ -1,5 +1,10 @@
 # Changelog
 
+## [v4.5.0](../../compare/v4.4.0...v4.5.0) (2021-12-13)
+
+* Bumping node v14 to v16; bumping deps.
+* Updating changelog.
+
 ## [v4.4.0](../../compare/v4.3.0...v4.4.0) (2021-10-16)
 
 * Bumping deps.
