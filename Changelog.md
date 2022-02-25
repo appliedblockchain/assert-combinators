@@ -1,5 +1,12 @@
 # Changelog
 
+## [v5.0.0](../../compare/v4.5.0...v5.0.0) (2022-02-25)
+
+* Meta cleanups.
+* Universal mjs/cjs.
+* Create codeql-analysis.yml.
+* Updating changelog.
+
 ## [v4.5.0](../../compare/v4.4.0...v4.5.0) (2021-12-13)
 
 * Bumping node v14 to v16; bumping deps.
