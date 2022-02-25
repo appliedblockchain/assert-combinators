@@ -2,59 +2,42 @@
   "name": "@appliedblockchain/assert-combinators",
   "version": "4.5.0",
   "description": "Assertion combinators.",
-  "main": "index.js",
+  "type": "module",
+  "main": "./cjs/index.js",
+  "module": "./mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./mjs/index.js",
+      "require": "./cjs/index.js"
+    },
+    "./*.js": {
+      "import": "./mjs/*.js",
+      "require": "./cjs/*.js"
+    },
+    "./*": {
+      "require": "./cjs/*.js"
+    }
+  },
   "scripts": {
-    "test": "eslint . && tsc && jest",
-    "postversion": "changelog > Changelog.md && git add Changelog.md && git commit -m \"Updating changelog.\" && git push && git push --tags && npm publish",
-    "update": "npm-check --update --save-exact",
-    "prepublishOnly": "npm test"
+    "test": "make test",
+    "preversion": "make test",
+    "postversion": "make postversion"
   },
   "keywords": [],
   "author": "Mirek Rusin <mirek@me.com> (https://github.com/mirek)",
   "license": "MIT",
   "devDependencies": {
-    "@appliedblockchain/changelog": "1.2.0",
+    "@appliedblockchain/changelog": "1.2.1",
     "@appliedblockchain/eslint-config": "3.0.0",
     "@tsconfig/node16": "1.0.2",
-    "@types/jest": "27.0.3",
-    "@typescript-eslint/eslint-plugin": "5.6.0",
-    "@typescript-eslint/parser": "5.6.0",
-    "eslint": "8.4.1",
-    "eslint-plugin-jest": "25.3.0",
-    "jest": "27.4.4",
+    "@types/jest": "27.4.1",
+    "@typescript-eslint/eslint-plugin": "5.12.1",
+    "@typescript-eslint/parser": "5.12.1",
+    "eslint": "8.9.0",
+    "eslint-plugin-jest": "26.1.1",
+    "jest": "27.5.1",
     "npm-check": "5.9.2",
-    "ts-jest": "27.1.1",
-    "typescript": "4.5.3"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "testMatch": [
-      "<rootDir>/**/?(*.)test.ts"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/wip/"
-    ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "@appliedblockchain"
-    ],
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": "error"
-    }
-  },
-  "eslintIgnore": [
-    "wip/*",
-    "docs/*",
-    "*.js"
-  ]
+    "ts-jest": "27.1.3",
+    "typescript": "4.5.5"
+  }
 }

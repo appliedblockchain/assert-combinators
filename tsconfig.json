@@ -1,21 +1,18 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
     "importsNotUsedAsValues": "error",
-    "resolveJsonModule": true,
-    "inlineSources": true,
-    "inlineSourceMap": true,
-    "isolatedModules": true
+    "module": "ES2020",
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": [
-    "**/*"
+    "src"
   ],
   "exclude": [
-    "node_modules",
-    "wip"
+    "node_modules"
   ]
 }

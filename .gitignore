@@ -1,4 +1,4 @@
-docs
-node_modules
-wip
 *.js
+cjs
+mjs
+node_modules

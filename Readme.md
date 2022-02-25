@@ -1,3 +1,8 @@
+![@appliedblockchain/tsql](https://shields.io/npm/v/@appliedblockchain/assert-combinators)
+![esm cjs](https://img.shields.io/badge/module-esm%20cjs-f39f37)
+
+---
+
 ## Summary
 
 Functional assertion combinators.
