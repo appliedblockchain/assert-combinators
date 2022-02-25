@@ -33,6 +33,12 @@ export type NullOr<T> =
   | null
   | T
 
+export type Defined<T> =
+  Exclude<T, undefined>
+
+export type NonNullish<T> =
+  Exclude<T, undefined | null>
+
 export type Predicate<T = unknown> =
   (value: T) => boolean
 

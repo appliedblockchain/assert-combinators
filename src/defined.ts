@@ -1,9 +1,11 @@
+import type { Defined } from './prelude.js'
+
 const defined =
-  <T>(value: T): Exclude<T, undefined> => {
+  <T>(value: T): Defined<T> => {
     if (typeof value === 'undefined') {
       throw new TypeError('Expected defined.')
     }
-    return value as Exclude<T, undefined>
+    return value as Defined<T>
   }
 
 export default defined

@@ -21,6 +21,7 @@ import never_ from './never.js'
 import nil from './nil.js'
 import nilOr from './nil-or.js'
 import nonBlankString from './non-blank-string.js'
+import nonNullish from './non-nullish.js'
 import null_ from './null.js'
 import nullOr from './null-or.js'
 import number from './number.js'
@@ -70,6 +71,7 @@ export {
   nil,
   nilOr,
   nonBlankString,
+  nonNullish,
   null_ as null,
   nullOr,
   number,
