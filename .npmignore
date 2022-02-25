@@ -1,5 +1,5 @@
 .github
 .vscode
-*.test.js
+*.test.*
 jest.*
 test

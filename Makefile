@@ -21,6 +21,9 @@ update:
 	@npx npm-check --update --save-exact
 
 postversion:
+	@npx changelog > Changelog.md
+	@git add Changelog.md
+	@git commit -m "Updating changelog."
 	@git push
 	@git push --tags
 	@npm publish
