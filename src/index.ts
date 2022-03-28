@@ -5,6 +5,7 @@ import dateString from './date-string.js'
 import defined from './defined.js'
 import eq from './eq.js'
 import errorOf from './error-of.js'
+import eventually from './eventually.js'
 import exact from './exact.js'
 import finite from './finite.js'
 import gt from './gt.js'
@@ -55,6 +56,7 @@ export {
   defined,
   eq,
   errorOf,
+  eventually,
   exact,
   finite,
   gt,
