@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.3.1](../../compare/v5.3.0...v5.3.1) (2022-03-28)
+
+* Fixing exact type.
+* Updating changelog.
+
 ## [v5.3.0](../../compare/v5.2.0...v5.3.0) (2022-03-28)
 
 * Allow primitives in objects.
