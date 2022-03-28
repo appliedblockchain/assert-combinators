@@ -2,7 +2,7 @@ import { inspect } from 'util'
 import type { Assert, Asserted, Primitive } from './prelude.js'
 
 const partial =
-  <T extends Record<string, Primitive | Assert<unknown>>>(kvs: T): Assert<{ [k in keyof T]?: Asserted<T[k]> }> =>
+  <T extends Record<string, Primitive | Assert<unknown>>>(kvs: T): Assert<{ [k in keyof T]?: T[k] extends Primitive ? T[k] : Asserted<T[k]> }> =>
     value => {
       if (typeof value !== 'object' || value == null) {
         throw new TypeError('Expected object.')

@@ -1,5 +1,20 @@
 import * as $ from './index.js'
 
+export type My = {
+  id: number,
+  uuid: string,
+  reason: null | string
+}
+
+export const assert: $.Assert<My> =
+  $.object({
+    id: $.number,
+    uuid: $.string,
+    reason: $.nullOr($.string)
+  })
+
+export type My2 = $.Asserted<typeof assert>
+
 test('object', () => {
   const r = $.object({ foo: $.string, bar: $.number })(JSON.parse('{"foo":"a","bar":1}'))
   expect(r).toEqual({ foo: 'a', bar: 1 })
