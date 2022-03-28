@@ -1,7 +1,7 @@
-import type { Assert } from './prelude.js'
 import { inspect } from 'util'
+import type { Assert } from './prelude.js'
 
-const string: Assert<string> =
+const string_: Assert<string> =
   value => {
     if (typeof value !== 'string') {
       throw new TypeError(`Expected string, got ${inspect(value)}.`)
@@ -9,4 +9,4 @@ const string: Assert<string> =
     return value
   }
 
-export default string
+export default string_

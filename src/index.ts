@@ -7,6 +7,7 @@ import eq from './eq.js'
 import errorOf from './error-of.js'
 import eventually from './eventually.js'
 import exact from './exact.js'
+import false_ from './false.js'
 import finite from './finite.js'
 import gt from './gt.js'
 import gte from './gte.js'
@@ -40,6 +41,7 @@ import safeInteger from './safe-integer.js'
 import sequence from './sequence.js'
 import strftime from './strftime.js'
 import string from './string.js'
+import true_ from './true.js'
 import tuple from './tuple.js'
 import undefined_ from './undefined.js'
 import undefinedOr from './undefined-or.js'
@@ -58,6 +60,7 @@ export {
   errorOf,
   eventually,
   exact,
+  false_ as false,
   finite,
   gt,
   gte,
@@ -91,6 +94,7 @@ export {
   sequence,
   strftime,
   string,
+  true_ as true,
   tuple,
   undefined_ as undefined,
   undefinedOr,
