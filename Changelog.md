@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.3.2](../../compare/v5.3.1...v5.3.2) (2022-03-28)
+
+* Fixing types.
+* Updating changelog.
+
 ## [v5.3.1](../../compare/v5.3.0...v5.3.1) (2022-03-28)
 
 * Fixing exact type.
