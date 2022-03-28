@@ -10,7 +10,9 @@ export type Assert<R> =
 export type Asserted<A> =
   A extends (value: unknown) => infer U ?
     U :
-    never
+    A extends Primitive ?
+      A :
+      never
 
 export type Awaited<T> =
   T extends PromiseLike<infer U> ?

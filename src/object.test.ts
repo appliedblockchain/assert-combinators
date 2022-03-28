@@ -8,3 +8,13 @@ test('object', () => {
 test('error', () => {
   expect(() => $.object({ foo: $.string, bar: $.number })(JSON.parse('{"foo":"a","bar":"2"}'))).toThrow('[bar] Expected number, got \'2\'.')
 })
+
+test('primitive', () => {
+  const assert = $.object({
+    foo: 'FOO' as const,
+    bar: 1 as const,
+    baz: true as const
+  })
+  expect(() => assert({ foo: 'FOO', bar: 1, baz: true, xyz: 'yes' })).not.toThrow()
+  expect(() => assert({ foo: 1 })).toThrow('Expected \'foo\' to be \'FOO\', got 1 in { foo: 1 } object.')
+})
