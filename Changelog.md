@@ -1,5 +1,11 @@
 # Changelog
 
+## [v5.1.0](../../compare/v5.0.0...v5.1.0) (2022-03-28)
+
+* Adding eventually.
+* Adding non-nullish.
+* Updating changelog.
+
 ## [v5.0.0](../../compare/v4.5.0...v5.0.0) (2022-02-25)
 
 * Meta cleanups.
