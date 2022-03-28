@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.2.0](../../compare/v5.1.1...v5.2.0) (2022-03-28)
+
+* Adding true and false.
+* Updating changelog.
+
 ## [v5.1.1](../../compare/v5.1.0...v5.1.1) (2022-03-28)
 
 * Fixing result type in eventually.
