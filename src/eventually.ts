@@ -1,11 +1,11 @@
 const eventually =
-  async <T>(assert: (result: T) => T, poll: () => Promise<T>, {
+  async <T, U>(assert: (result: T) => U, poll: () => Promise<T>, {
     retries = 10,
     delay = 1000
   }: {
     retries?: number,
     delay?: number
-  } = {}): Promise<T> => {
+  } = {}): Promise<U> => {
     for (let retry = 1; retry <= retries; retry++) {
       const before = Date.now()
       const result = await poll()
