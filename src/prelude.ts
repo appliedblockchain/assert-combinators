@@ -12,6 +12,13 @@ export type Asserted<A> =
     U :
     never
 
+export type AssertedWithPrimitive<T> =
+  T extends (value: unknown) => infer U ?
+    U :
+    T extends Primitive ?
+      T :
+      never
+
 export type Awaited<T> =
   T extends PromiseLike<infer U> ?
     Awaited<U> :
@@ -45,7 +52,8 @@ export type Predicate<T = unknown> =
 export type Primitive =
   | undefined
   | null
-  | boolean
+  | false
+  | true
   | number
   | string
   | symbol

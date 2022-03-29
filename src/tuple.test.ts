@@ -17,3 +17,9 @@ test('optional tail', () => {
   expect($.tuple($.number, $.undefinedOr($.string))(JSON.parse('[1]'))).toEqual([ 1 ])
   expect($.tuple($.number, $.undefinedOr($.string))(JSON.parse('[1,"foo"]'))).toEqual([ 1, 'foo' ])
 })
+
+test('literal', () => {
+  const assert = $.tuple('foo', $.number)
+  expect(() => assert([ 'foo', 1 ])).not.toThrow()
+  expect(() => assert([ 'bar', 1 ])).toThrow('Expected tuple element at index 0 to be \'foo\', got \'bar\'.')
+})

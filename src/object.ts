@@ -1,8 +1,8 @@
 import { inspect } from 'util'
-import type { Assert, Asserted, Primitive } from './prelude.js'
+import type { Assert, AssertedWithPrimitive, Primitive } from './prelude.js'
 
 const object =
-  <T extends Record<string, Assert<unknown> | Primitive>>(kvs: T): Assert<{ [k in keyof T]: T[k] extends Primitive ? T[k] : Asserted<T[k]> }> =>
+  <T extends Record<string, Assert<unknown> | Primitive>>(kvs: T): Assert<{ [k in keyof T]: AssertedWithPrimitive<T[k]> }> =>
     value => {
       if (typeof value !== 'object' || value === null) {
         throw new TypeError(`Expected object, got ${inspect(value)}.`)
@@ -19,7 +19,7 @@ const object =
           throw new TypeError(`Expected ${inspect(k)} to be ${inspect(v)}, got ${inspect((value as Record<string, unknown>)[k])} in ${inspect(value)} object.`)
         }
       }
-      return value as { [k in keyof T]: T[k] extends Primitive ? T[k] : Asserted<T[k]> }
+      return value as { [k in keyof T]: AssertedWithPrimitive<T[k]> }
     }
 
 export default object
