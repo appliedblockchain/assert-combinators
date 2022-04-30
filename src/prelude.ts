@@ -20,7 +20,7 @@ export type Awaited<T> =
 export type Keyed<T = unknown> =
   Record<string, T | undefined>
 
-export type NilOr<T> =
+export type Nullish<T> =
   | undefined
   | null
   | T
@@ -29,7 +29,7 @@ export type UndefinedOr<T> =
   | undefined
   | T
 
-export type NullOr<T> =
+export type Nullable<T> =
   | null
   | T
 
@@ -49,3 +49,10 @@ export type Primitive =
   | number
   | string
   | symbol
+
+export type Exact<T, I> =
+  T extends I ?
+    Exclude<keyof T, keyof I> extends never ?
+      T :
+      never :
+    never

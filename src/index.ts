@@ -20,11 +20,11 @@ import keyed from './keyed.js'
 import lt from './lt.js'
 import lte from './lte.js'
 import never_ from './never.js'
-import nil from './nil.js'
-import nilOr from './nil-or.js'
 import nonBlankString from './non-blank-string.js'
 import nonNullish from './non-nullish.js'
 import null_ from './null.js'
+import nullish from './nullish.js'
+import nullishOr from './nullish-or.js'
 import nullOr from './null-or.js'
 import number from './number.js'
 import object from './object.js'
@@ -73,11 +73,11 @@ export {
   lt,
   lte,
   never_ as never,
-  nil,
-  nilOr,
   nonBlankString,
   nonNullish,
   null_ as null,
+  nullish,
+  nullishOr,
   nullOr,
   number,
   object,

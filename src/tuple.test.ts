@@ -17,3 +17,12 @@ test('optional tail', () => {
   expect($.tuple($.number, $.undefinedOr($.string))(JSON.parse('[1]'))).toEqual([ 1 ])
   expect($.tuple($.number, $.undefinedOr($.string))(JSON.parse('[1,"foo"]'))).toEqual([ 1, 'foo' ])
 })
+
+test('undefined, null, nullish', () => {
+  const r = $.tuple(
+    $.undefinedOr($.number),
+    $.nullOr($.string),
+    $.nullishOr($.boolean)
+  )(JSON.parse('[1,"foo"]'))
+  expect(r).toEqual([ 1, 'foo' ])
+})

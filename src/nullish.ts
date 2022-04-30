@@ -1,11 +1,11 @@
 import type { Assert } from './prelude.js'
 
-const nil: Assert<undefined | null> =
+const nullish: Assert<undefined | null> =
   value => {
     if (value != null) {
-      throw new TypeError('Expected nil.')
+      throw new TypeError('Expected nullish.')
     }
     return value as undefined | null
   }
 
-export default nil
+export default nullish

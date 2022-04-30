@@ -1,15 +1,15 @@
 import * as $ from './index.js'
 
 type My = {
-  defaultA?: $.NilOr<number>,
-  defaultB?: $.NilOr<number>
+  defaultA?: $.Nullish<number>,
+  defaultB?: $.Nullish<number>
 } & { [key: string]: number }
 
 const my: $.Assert<My> =
   (value: unknown) => {
     const { defaultA, defaultB, ...rest } = $.object({
-      defaultA: $.nilOr($.number),
-      defaultB: $.nilOr($.number)
+      defaultA: $.nullishOr($.number),
+      defaultB: $.nullishOr($.number)
     })(value)
     return {
       ...$.record($.string, $.number)(rest),

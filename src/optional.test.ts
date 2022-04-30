@@ -1,8 +1,8 @@
 import * as $ from './index.js'
 
-test('nilOr', () => {
-  expect(() => $.object({ foo: $.nilOr($.number) })({ foo: 'bar' }))
-    .toThrow('[foo] Was not null or undefined. Expected number, got \'bar\'.')
+test('nullishOr', () => {
+  expect(() => $.object({ foo: $.nullishOr($.number) })({ foo: 'bar' }))
+    .toThrow('[foo] Was not nullish. Expected number, got \'bar\'.')
 })
 
 test('nullOr', () => {
