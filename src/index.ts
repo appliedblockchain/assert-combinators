@@ -99,5 +99,9 @@ export {
   undefined_ as undefined,
   undefinedOr,
   unique,
-  unknown
+  unknown,
+
+  // Backward compatibility:
+  nullish as nil,
+  nullishOr as nilOr
 }

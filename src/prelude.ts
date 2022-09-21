@@ -20,6 +20,12 @@ export type Awaited<T> =
 export type Keyed<T = unknown> =
   Record<string, T | undefined>
 
+/** @deprecated use {@link Nullish} */
+export type NilOr<T> =
+  | undefined
+  | null
+  | T
+
 export type Nullish<T> =
   | undefined
   | null
