@@ -1,6 +1,6 @@
 {
   "name": "@appliedblockchain/assert-combinators",
-  "version": "5.3.2",
+  "version": "5.4.0",
   "description": "Assertion combinators.",
   "type": "module",
   "main": "./cjs/index.js",
