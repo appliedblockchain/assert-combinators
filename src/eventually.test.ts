@@ -8,5 +8,5 @@ test('eventually', async () => {
 
 test('eventually fails', async () => {
   await expect($.eventually($.gt(2), async () => 1, { delay: 10 }))
-    .rejects.toThrow('Expected 1 to be greater than 2.')
+    .rejects.toThrow('Expected 1 to be greater than 2. Last result was 1.')
 })
