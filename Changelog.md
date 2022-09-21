@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.4.1](../../compare/v5.4.0...v5.4.1) (2022-09-21)
+
+* Fix: preserve backward compatibility.
+* Updating changelog.
+
 ## [v5.4.0](../../compare/v5.3.2...v5.4.0) (2022-09-21)
 
 * Feat(eventually): custom error constructor with last result inspection.
