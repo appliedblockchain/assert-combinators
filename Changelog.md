@@ -1,5 +1,13 @@
 # Changelog
 
+## [v5.4.0](../../compare/v5.3.2...v5.4.0) (2022-09-21)
+
+* Feat(eventually): custom error constructor with last result inspection.
+* Chore: bumping dev deps.
+* Renaming nil to nullish.
+* Bumping deps.
+* Updating changelog.
+
 ## [v5.3.2](../../compare/v5.3.1...v5.3.2) (2022-03-28)
 
 * Fixing types.
