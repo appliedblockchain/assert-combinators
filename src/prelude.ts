@@ -5,7 +5,8 @@ export type Alias<T> =
     never
 
 export type Assert<R> =
-  (value: unknown) => R
+  (value: unknown) =>
+    R
 
 export type Asserted<A> =
   A extends (value: unknown) => infer U ?
@@ -50,7 +51,7 @@ export type Predicate<T = unknown> =
 
 export type Primitive =
   | undefined
-  // | null // @todo: ts 4.9 doesn't like it
+  | null
   | boolean
   | number
   | string
@@ -63,3 +64,10 @@ export type Exact<T, I> =
       T :
       never :
     never
+
+export type OptionalIfUndefinedOnly<T> = {
+  [K in keyof T as undefined extends T[K] ? K : never]?: T[K]
+}
+
+export type OptionalIfUndefined<T> =
+  Omit<T, keyof OptionalIfUndefinedOnly<T>> & OptionalIfUndefinedOnly<T>
