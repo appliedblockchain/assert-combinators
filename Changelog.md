@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.5.0](../../compare/v5.4.1...v5.5.0) (2022-12-14)
+
+* Chore: bumping ts.
+* Updating changelog.
+
 ## [v5.4.1](../../compare/v5.4.0...v5.4.1) (2022-09-21)
 
 * Fix: preserve backward compatibility.
