@@ -50,11 +50,12 @@ export type Predicate<T = unknown> =
 
 export type Primitive =
   | undefined
-  | null
+  // | null // @todo: ts 4.9 doesn't like it
   | boolean
   | number
   | string
   | symbol
+  | bigint
 
 export type Exact<T, I> =
   T extends I ?
