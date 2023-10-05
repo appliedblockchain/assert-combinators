@@ -1,12 +1,12 @@
-import type { Assert } from './prelude.js'
+import type { Assert, Asserted } from './prelude.js'
 import { inspect } from 'util'
 
-const or: <T extends Assert<unknown>[]>(...as: T) => T[number] =
-  (...as) =>
-    value => {
+const or =
+  <As extends Assert<unknown>[]>(...as: As) =>
+    (value: unknown) => {
       for (const a of as) {
         try {
-          return a(value)
+          return a(value) as Asserted<As[number]>
         } catch (err) {
           continue
         }

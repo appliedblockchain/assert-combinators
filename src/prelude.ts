@@ -71,3 +71,6 @@ export type OptionalIfUndefinedOnly<T> = {
 
 export type OptionalIfUndefined<T> =
   Omit<T, keyof OptionalIfUndefinedOnly<T>> & OptionalIfUndefinedOnly<T>
+
+export type IntersectionOfUnion<T> =
+  (T extends unknown ? (_: T) => unknown : never) extends (_: infer R) => unknown ? R : never
