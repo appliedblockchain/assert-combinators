@@ -1,5 +1,10 @@
 # Changelog
 
+## [v5.6.1](../../compare/v5.6.0...v5.6.1) (2023-10-05)
+
+* Fix(or): fixing typing for `or`.
+* Updating changelog.
+
 ## [v5.6.0](../../compare/v5.5.0...v5.6.0) (2022-12-14)
 
 * Feat: optional if undefined.
