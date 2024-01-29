@@ -1,5 +1,11 @@
 # Changelog
 
+## [v5.7.0](../../compare/v5.6.1...v5.7.0) (2024-01-29)
+
+* Fix(and): fixing typing for and.
+* Chore(deps): bumping deps.
+* Updating changelog.
+
 ## [v5.6.1](../../compare/v5.6.0...v5.6.1) (2023-10-05)
 
 * Fix(or): fixing typing for `or`.
