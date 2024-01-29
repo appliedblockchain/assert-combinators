@@ -1,12 +1,14 @@
 import type { Assert } from './prelude.js'
 
-type $<T> = Assert<T>
+type Z<A, B> =
+  (value: A) =>
+    B
 
 type And = {
-  <A>(a: $<A>): $<A>
-  <A, B>(a: $<A>, b: $<B>): $<A & B>
-  <A, B, C>(a: $<A>, b: $<B>, c: $<C>): $<A & B & C>
-  <A, B, C, D>(a: $<A>, b: $<B>, c: $<C>, d: $<D>): $<A & B & C & D>
+  <A>(a: Assert<A>): Assert<A>
+  <A, B>(a: Assert<A>, b: Z<A, B>): Assert<A & B>
+  <A, B, C>(a: Assert<A>, b: Z<A, B>, c: Z<B, C>): Assert<A & B & C>
+  <A, B, C, D>(a: Assert<A>, b: Z<A, B>, c: Z<B, C>, d: Z<C, D>): Assert<A & B & C & D>
 }
 
 const and: And =
