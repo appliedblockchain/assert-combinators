@@ -1,7 +1,6 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "importsNotUsedAsValues": "error",
     "module": "ES2020",
     "moduleResolution": "Node",
     "noImplicitAny": true,
